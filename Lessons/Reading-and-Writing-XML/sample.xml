@@ -1,1 +1,5 @@
-﻿
+﻿<Settings>
+	<Entry id="1">Value 1</Entry>
+	<Entry id="2">Value 2</Entry>
+	<Entry id="3">Value 3</Entry>
+</Settings>
