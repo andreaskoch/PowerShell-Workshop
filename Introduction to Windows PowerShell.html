@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Windows PowerShell</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file://C:\Users\andreas\Desktop\hg-dev\powershell-workshop\theme\css\print.css">
+    <link rel="stylesheet" media="screen, projection" href="file://C:\Users\andreas\Desktop\hg-dev\powershell-workshop\theme\css\screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file://C:\Users\andreas\Desktop\hg-dev\powershell-workshop\theme\js\slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Windows PowerShell</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Agenda</h2></header>
+            
+            
+            <section><ul>
+<li>Introduction to PowerShell</li>
+<li>Getting Started with PowerShell</li>
+<li>Core Elements of PowerShell</li>
+<li>Hands on PowerShell </li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>What is PowerShell?</h2></header>
+            
+            
+            <section><ul>
+<li>Task Automation Framework</li>
+<li>Command-Line Shell and Scripting Language for Windows</li>
+<li>Based on the .NET Framework</li>
+<li>Inspired by UNIX shells and scripting languages such as Perl and Python</li>
+</ul>
+<p><strong>Screenshot of the Windows PowerShell Console 2.0</strong>
+<img alt="Screenshot of the Windows PowerShell Console 2.0" src="file://C:\Users\andreas\Desktop\hg-dev\powershell-workshop\resources/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h3>Terminology: Shell- vs. Scripting-Languages</h3></header>
+            
+            
+            <section><h4>(Command-Line) Shell</h4>
+<blockquote>
+<p>A shell is a piece of software that lets you access the functionality provided by the operating system.</p>
+</blockquote>
+<p>Bruce Pyette - PowerShell in Action</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><strong>Common features of command-line shells</strong></p>
+<ul>
+<li>Read-Evaluate-Print loop (REP)</li>
+<li>Aliases/Shortcuts for long command names</li>
+<li>Wildcard matching, so you don’t have to type the full names of everything</li>
+<li>Call external programs</li>
+<li>Command History</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><strong>UNIX Shells</strong></p>
+<ul>
+<li>Bourne-Again Shell (bash)</li>
+<li>Korn Shell (ksh)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><strong>Windows Shells</strong></p>
+<ul>
+<li>Command.com</li>
+<li>Cmd.exe</li>
+<li>PowerShell</li>
+<li>Cygwin</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md">C:\Users\andreas\Desktop\hg-dev\powershell-workshop\Introduction to Windows PowerShell.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Windows PowerShell</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+        
+        <tr id="toc-row-2" class="sub">
+          <th><a href="#slide2">Agenda</a></th>
+          <td><a href="#slide2">2</a></td>
+        </tr>
+        
+        <tr id="toc-row-3" class="sub">
+          <th><a href="#slide3">What is PowerShell?</a></th>
+          <td><a href="#slide3">3</a></td>
+        </tr>
+        
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">-</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">-</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">-</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">-</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
