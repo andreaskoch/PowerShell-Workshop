@@ -261,3 +261,46 @@ Start PowerShell
 	PS> Set-Location PowerShell-Workshop
 	PS> hg branch "YourName"
 	PS> hg push --new-branch
+
+----------
+
+# Core Elements of PowerShell #
+
+----------
+
+## Key Points about PowerShell ##
+
+- PowerShell is case insensitive by default.
+- PowerShell is object-based. Everything is an object.
+- PowerShell is provider based.
+- PowerShell supports streaming behaviour.
+- You can use all the existing cmd.exe commands you know and love.
+- You don’t have to type the full name of every command. Only as much as is required in order to make it distinct.
+
+----------
+
+## Features of the PowerShell console (1) ##
+
+The PowerShell console is based on cmd.exe and has basically the same features, but also some that cmd.exe and other shells are missing:
+
+**Tab Completion**: Enter a command partially and then hit the *TAB*-key in order to let PowerShell complete the command
+
+- For commands
+- For wildcards
+- For variables
+- For object properties
+- For functions
+- PowerShell providers (Filesystem, IIS, Certificates, Registry, …)
+- And you can build your own tab-completion modules.
+
+----------
+
+## Features of the PowerShell console (2) ##
+
+**Evaluation of basic expressions**
+
+![Screenshot of expression evaluation feature of the PowerShell console](resources/screenshots/Screenshot-14-Expression-Evaluation-in-PowerShell.png)
+
+**F7 Command History**: As in cmd.exe the <F7> key pops up a command history window
+
+![Screenshot of the PowerShell command history feature which is displayed when the user hits th F7 key](resources/screenshots/Screenshot-17-Command-History.png)
