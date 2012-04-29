@@ -22,6 +22,7 @@
 - Inspired by UNIX shells and scripting languages such as Perl and Python
 
 **Screenshot of the Windows PowerShell Console 2.0**
+
 ![Screenshot of the Windows PowerShell Console 2.0](resources/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png)
 
 ----------
@@ -68,21 +69,27 @@
 
 - Command.com
 - Cmd.exe
+
 ![Screenshot of the Windows Command-Line cmd.exe](resources/screenshots/Screenshot-09-Windows-CMD-Exe-Shell.png)
+
 - PowerShell
 
 ----------
 
 ## Examples: Windows Shells (2) ##
 - Cygwin
+
 ![Screenshot of the Cygwin GNU Bash](resources/screenshots/Screenshot-08-Cygwin-GNU-Bash.png)
 
 ----------
 
 ## Examples: Browser Shells ##
 - Chrome Console
+
 ![Screenshot of the Google Chrome Developer Tools Console](resources/screenshots/Screenshot-06-Chrome-Console.png)
+
 - Firebug Command Line
+
 ![Screenshot of the Firebug Command-Line for Firefox](resources/screenshots/Screenshot-07-Firebug-Command-Line.png)
 
 ----------
@@ -304,3 +311,118 @@ The PowerShell console is based on cmd.exe and has basically the same features, 
 **F7 Command History**: As in cmd.exe the <F7> key pops up a command history window
 
 ![Screenshot of the PowerShell command history feature which is displayed when the user hits th F7 key](resources/screenshots/Screenshot-17-Command-History.png)
+
+----------
+
+# PowerShell Syntax #
+
+----------
+
+## PowerShell Command Structure ##
+
+A PowerShell command consists of:
+
+- Command Name
+- Switch Parameter(s)
+- Command Parameter(s)
+- Command Argument(s)
+
+![PowerShell Command Structure: Command Name, Switch Parameter(s), Command Parameter(s) and Command Argument(s)](resources/screenshots/Screenshot-18-Command-Syntax.png)
+
+----------
+
+## PowerShell Command Syntax ##
+
+PowerShell commands, called cmdlets [speak: command-lets], use verb*-noun pairs in order to be self-descriptive.
+
+> Note: Windows PowerShell uses the term verb to describe a word that implies an action even if that word is not a standard verb in the English language. For example, the term New is a valid Windows PowerShell verb name because it implies an action even though it is not a verb in the English language.
+
+Examples
+
+- Get-Help
+- Remove-Item
+- Move-Item
+- Format-List
+- Write-Host
+
+
+**Links**
+
+- [Verb Naming Rules](http://msdn.microsoft.com/en-us/library/windows/desktop/ms714428(v=vs.85).aspx)
+
+----------
+
+## Common Verbs and their meaning (1) ##
+
+Here is a list of the most common verbs used for PowerShell commands:
+
+<table>
+<thead>
+<tr><td>Verb</td><td>Description</td><td>Counterpart</td></tr>
+</thead>
+<tbody>
+<tr><td>Add</td><td>Adds a resource to a container, or attaches an item to another item.</td><td>Remove</td></tr>
+<tr><td>Clear</td><td>Removes all resources from a container but does not delete the container.</td><td></td></tr>
+<tr><td>Close</td><td>Changes the state of a resource to make it inaccessible, unavailable, or unusable.</td><td></td></tr>
+<tr><td>Copy</td><td>Copies a resource to another container.</td><td></td></tr>
+<tr><td>Enter</td><td>Specifies an action that allows the user to move into a resource.</td><td>Exit</td></tr>
+<tr><td>Exit</td><td>Sets the current environment or context to most recently used context.</td><td>Enter</td></tr>
+<tr><td>Find</td><td>Looks for an object in a container that is unknown, implied, optional, or specified.</td><td></td></tr>
+<tr><td>Format</td><td>Arranges objects in a specified form or layout.</td><td></td></tr>
+<tr><td>Get</td><td>Specifies an action that retrieves a resource.</td><td>Set</td></tr>
+<tr><td>Hide</td><td>Makes a resource undetectable.</td><td>Show</td></tr>
+<tr><td>Join</td><td>Combines resources into one resource.</td><td>Split</td></tr>
+<tr><td>Lock</td><td>Secures a resources.</td><td>Unlock</td></tr>
+<tr><td>New</td><td>Creates a resource.</td><td></td></tr>
+<tr><td>Open</td><td>Changes the state of a resource to make it accessible, available, or usable.</td><td>Close</td></tr>
+<tr><td>Pop</td><td>Removes an item from the top of a stack.</td><td>Push</td></tr>
+<tr><td>Push</td><td>Adds an item to the top of a stack.</td><td>Pop</td></tr>
+</tbody>
+</table>
+
+----------
+
+## Common Verbs and their meaning (2) ##
+
+<table>
+<thead>
+<tr><td>Verb</td><td>Description</td><td>Counterpart</td></tr>
+</thead>
+<tbody>
+<tr><td>Redo</td><td>Resets a resource to the state that was undone.</td><td></td></tr>
+<tr><td>Remove</td><td>Deletes a resource from a container.</td><td>Add</td></tr>
+<tr><td>Rename</td><td>Changes the name of a resource.</td><td></td></tr>
+<tr><td>Reset</td><td>Sets a resource back to its original state.</td><td></td></tr>
+<tr><td>Search</td><td>Creates a reference to a resource in a container.</td><td></td></tr>
+<tr><td>Select</td><td>Locates a resouces in a container.</td><td></td></tr>
+<tr><td>Set</td><td>Replaces data on an existing resource or creates a resources that contains some data.</td><td>Get</td></tr>
+<tr><td>Show</td><td>Makes a resource visible to the user.</td><td>Hide</td></tr>
+<tr><td>Skip</td><td>Bypasses one or more resources or points in a sequence.</td><td></td></tr>
+<tr><td>Split</td><td>Seperates parts of a resource.</td><td>Join</td></tr>
+<tr><td>Step</td><td>Moves to the next point or resources in a sequence.</td><td></td></tr>
+<tr><td>Switch</td><td>Specifies an action that alternates between two resources, such as to change between two locations, responsibilities, or states.</td><td></td></tr>
+<tr><td>Undo</td><td>Sets a resource to its previous state.</td><td></td></tr>
+<tr><td>Unlock</td><td>Releases a resource that was locked.</td><td>Lock</td></tr>
+<tr><td>Watch</td><td>Continually inspects or monitors a resource for changes.</td><td></td></tr>
+</tbody>
+</table>
+
+For more examples and PowerShell development guidelines please refer to the MSDN documentation:
+
+- [MSDN Dev Center - Verb naming rules](http://msdn.microsoft.com/en-us/library/windows/desktop/ms714428(v=vs.85).aspx)
+
+----------
+
+## Variables (1) ##
+
+Variables defined by a leading dollar sign ($):
+
+	PS> $someVariable = "Some Content"
+
+All variables can be accessed through a PowerShell provider/drive called "variable:"
+
+	PS> cd variable:
+	PS> dir
+	PS> get-item someVariable
+
+![Screenshot of a PowerShell Console window which defined a new variable and accesses it through the variable: PowerShell drive provider](resources/screenshots/Screenshot-35-Variables.png)
