@@ -502,3 +502,76 @@ Since PowerShell is a Shell that needs to support Windows-style file systems, it
 	PS> Write-Host "Key:`"$value`""
 
 ![Screenshot of the PowerShell console using the double quote escape sequence for the Write-Host command](resources/screenshots/Screenshot-29-Escape-Characters.png)
+
+----------
+
+## Statement Termination (1) ##
+
+PowerShell has two statement termination characters: the **semicolon** (;) and sometimes the **newline** (\r\n). If the previous text is a syntactically complete statement, a newline is considered to be a statement termination. If it isn’t complete, the newline is simply treated like any other whitespace.
+
+**Example: Defining an array accross multiple lines**
+
+	PS> $someArrayContainingNumbers = @(1,2,
+	PS> 3,
+	PS> 4,
+	PS> 5,6
+	PS> ,7
+	PS> ,8,
+	PS> 9,0)
+	PS> 
+
+![Screenshot showing array which spreads several lines in the PowerShell console](resources/screenshots/Screenshot-19-Statement-Termination.png)
+
+----------
+
+## Statement Termination (2) ##
+
+**Example: Foreach loop**
+
+	PS> foreach ($number in $someArrayContainingNumbers) {
+	PS>	   Write-Host "The Number is: $number"
+	PS> }
+	PS> 
+
+![Screenshot showing a foreach loop which spreads several lines in the PowerShell console](resources/screenshots/Screenshot-20-Statement-Termination.png)
+
+----------
+
+## Statement Termination (3) ##
+
+**Example: Using expressions and semicolons for multi-line statements**
+
+	PS> $a = (1 + 2) *
+	PS> 3
+	PS> $b = 4;
+	PS> $a + $b
+	PS> 
+
+![Screenshot showing the use of expressions and semicolons for multi-line statements in the PowerShell console](resources/screenshots/Screenshot-21-Statement-Termination.png)
+
+----------
+
+## Statement Termination (4) ##
+
+**Example: Using double quotes to start a multi-line statement**
+
+	PS> Write-Host "Multi-Line:
+	PS> Line 1
+	PS> Line 2
+	PS> Line 3"
+	PS>
+
+![Screenshot showing the use of double quotes for multi-line statements in the PowerShell console](resources/screenshots/Screenshot-22-Statement-Termination.png)
+
+----------
+
+## Statement Termination (5) ##
+
+**Example: Using the backtick character (`) for bypassing the statement termination**
+
+	PS> Get-ChildItem `
+	PS> -Path .\Users\Administrator `
+	PS> -Filter *.ini
+	PS>
+
+![Screenshot showing the use of the backtick (`) character for bypassing the statement termination in the PowerShell console](resources/screenshots/Screenshot-23-Statement-Termination.png)
