@@ -413,7 +413,7 @@ For more examples and PowerShell development guidelines please refer to the MSDN
 
 ----------
 
-## Variables (1) ##
+## Variables ##
 
 Variables defined by a leading dollar sign ($):
 
@@ -426,3 +426,33 @@ All variables can be accessed through a PowerShell provider/drive called "variab
 	PS> get-item someVariable
 
 ![Screenshot of a PowerShell Console window which defined a new variable and accesses it through the variable: PowerShell drive provider](resources/screenshots/Screenshot-35-Variables.png)
+
+----------
+
+## Quotes (1) ##
+
+Text in PowerShell is marked by 'single'- or "double"-quotes. If a command name or argument contains whitespace or other special characters, you must wrap the value in single or double quotes. Otherwise the command-interpreter cannot bind the parameters and arguments correctly.
+
+**Missing Quotes**
+
+Missing quotes might lead to errors if the command argument contains whitespace characters:
+
+	PS> Set-Location .\Program Files (x86)
+
+![Screenshot of a PowerShell console where the correct quoting is missing for a set-location command](resources/screenshots/Screenshot-24-Quoting.png)
+
+----------
+
+## Quotes (2) ##
+
+**Single Quotes**
+
+	PS> Set-Location '.\Program Files (x86)'
+
+![Screenshot of a PowerShell console using single quotes for the set-location command](resources/screenshots/Screenshot-25-Quoting.png)
+
+**Double Quotes**
+
+	PS> Set-Location ".\Program Files (x86)"
+
+![Screenshot of a PowerShell console using double quotes for the set-location command](resources/screenshots/Screenshot-26-Quoting.png)
