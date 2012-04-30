@@ -1032,7 +1032,6 @@ Now you can add the functions for reading and writing to and from the Windows Cl
 		$tb.Text
 	}
 
-
 Start a new instance of PowerShell and verify that your functions have been applied correctly:
 
 	PS> Get-Command *Clipboard*
