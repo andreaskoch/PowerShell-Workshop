@@ -967,3 +967,93 @@ tbd
 
 ----------
 
+## Creating functions for clipboard access (1) ##
+
+In this lesson we are going to extend your personal PowerShell profile with function for reading and writing from and to the clipboard.
+
+**What it the PowerShell Profile**
+
+The Windows PowerShell profile is simply a script file that runs when you start Windows PowerShell. All functions defined in this script will be automatically available in your new PowerShell session.
+The location of your PowerShell profile is stored in the $PROFILE variable:
+
+	PS> $profile
+	C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+![Screenshot of Windows PowerShell Console displaying the content of the $profile variable](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-01-Profile-Variable.png)
+
+----------
+
+## Creating functions for clipboard access (2) ##
+
+You can edit your profile script by entering:
+
+	PS> notepad $profile
+
+In case you don’t have a profile script you will get a message like this:
+
+![$profile does not exist](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-02-Profile-Does-Not-Exist.png)
+
+----------
+
+## Creating functions for clipboard access (3) ##
+
+In order to create the profile script and open it with notepad enter this command:
+
+	PS> notepad (New-Item $PROFILE -Type file -force)
+
+![Create a PowerShell Profile and edit it with notepad](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-03-Creating-a-Profile.png)
+
+Everything that you add to this script will be executed when you launch a new instance of PowerShell.
+
+----------
+
+## Creating functions for clipboard access (4) ##
+
+In order to open the directory of the profile script you can enter:
+
+	PS> explorer (Get-Item $PROFILE).Directory
+
+![PowerShell command for opening the PowerShell $profile directory in the Windows Explorer](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-04-Open-Profile-Directory-in-Windows-Explorer.png)
+
+----------
+
+## Creating functions for clipboard access (5) ##
+
+Now you can add the functions for reading and writing to and from the Windows Clipboard to your personal PowerShell profile:
+
+	new-alias Out-Clipboard $env:SystemRoot\system32\clip.exe
+	
+	function Get-ClipboardText()
+	{
+		Add-Type -AssemblyName System.Windows.Forms
+		$tb = New-Object System.Windows.Forms.TextBox
+		$tb.Multiline = $true
+		$tb.Paste()
+		$tb.Text
+	}
+
+
+Start a new instance of PowerShell and verify that your functions have been applied correctly:
+
+	PS> Get-Command *Clipboard*
+
+![Screenshot of a PowerShell console displaying the two new functions for reading and writing from and to the Windows Clipboard: Get-ClipboardText and Out-Clipboard](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-05-Get-Clipboard-Commands.png)
+
+----------
+
+## Creating functions for clipboard access (6) ##
+ 
+And now you can take your new functions “Get-ClipboardText” and “Out-Clipboard” out for a spin:
+
+	PS> Get-Content $Profile | Out-Clipboard
+	PS> dir | Out-Clipboard
+	PS> Get-Process | Out-Clipboard
+
+**Links**
+
+- [The Windows PowerShell Profile](http://technet.microsoft.com/en-us/library/ee692764.aspx)
+- [Copy and Paste with Clipboard from PowerShell](http://brianreiter.org/2010/09/03/copy-and-paste-with-clipboard-from-powershell/)
+- [Using the New-Alias Cmdlet](http://technet.microsoft.com/en-us/library/ee176913.aspx)
+- [Using the Add-Type Cmdlet](http://technet.microsoft.com/en-US/library/dd315241.aspx)
+- [Using the New-Object Cmdled](http://technet.microsoft.com/en-US/library/dd315334.aspx)
+- [The .NET TextBox Class](http://msdn.microsoft.com/en-us/library/system.windows.forms.textbox.aspx)
