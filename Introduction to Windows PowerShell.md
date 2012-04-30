@@ -575,3 +575,69 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS>
 
 ![Screenshot showing the use of the backtick (`) character for bypassing the statement termination in the PowerShell console](resources/screenshots/Screenshot-23-Statement-Termination.png)
+
+----------
+
+# PowerShell's Built-in Help #
+
+----------
+
+## The Get-Help Command (1) ##
+
+PowerShell has a built-in help command that can provide a lot of information and about the different PowerShell commands and the scripting language itself - just like the Unix [man pages](http://en.wikipedia.org/wiki/Man_page).
+
+<table>
+<thead>
+<tr><td>Command</td><td>Description</td></tr>
+</thead>
+<tbody>
+<tr><td>get-help *</td><td>Display all available help topics</td></tr>
+<tr><td>get-help get-*</td><td>Display all help topics that begin with "get-"</td></tr>
+<tr><td>get-help *SomeString*</td><td>Display topics with "SomeString" in the name</td></tr>
+<tr><td>get-help set-location</td><td>Displays help about the "set-location" cmdlet</td></tr>
+<tr><td>get-help set-location -examples</td><td>Displays examples on how to use the "set-location" cmdlet</td></tr>
+<tr><td>get-help set-location -detailed</td><td>Display additional information about a cmdlet, including descriptions of the parameters and examples of using the cmdlet.</td></tr>
+<tr><td>get-help set-location -full</td><td>Display the entire help file for a cmdlet, including technical information about the parameters.</td></tr>
+<tr><td>get-help about*</td><td>Display conceptual help topics</td></tr>
+<tr><td>get-help about_functions</td><td>Displays conceptual help about "functions"</td></tr>
+<tr><td>get-help about_switch</td><td>Display conceptual help about "switch" statements</td></tr>
+</tbody>
+</table>
+
+----------
+
+## The Get-Help Command (2) ##
+
+	PS> get-help
+
+![Screenshot of the PowerShell console displaying the result of the get-help command](resources/screenshots/Screenshot-30-Help.png)
+
+----------
+
+## The Get-Help Command (3) ##
+
+Using the get-help command together with the "-examples" switch to display some example usages of the "set-location" cmdlet:
+
+	PS> get-help set-location -examples
+
+![Screenshot of the PowerShell console displaying the results of the get-help set-location -examples command](resources/screenshots/Screenshot-32-Help.png)
+
+----------
+
+## The Get-Help Command (4) ##
+
+The PowerShell Get-Help cmdlets returns objects not just plain text, but full help objects on which you can access any property you like:
+
+	PS> (get-help set-location) | Get-Member
+
+![Screenshot of the PowerShell console displaying the properties of a help object](resources/screenshots/Screenshot-34-Help.png)
+
+----------
+
+## The Get-Help Command (5) ##
+
+Using the "syntax" property of an help object to display only the syntax section of a help result: 
+
+	PS> (get-help set-location).Syntax
+
+![Screenshot of the PowerShell console displaying the results of the (get-help set-location).Syntax command](resources/screenshots/Screenshot-33-Help.png)
