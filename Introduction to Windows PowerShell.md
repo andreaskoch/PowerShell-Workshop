@@ -456,3 +456,49 @@ Missing quotes might lead to errors if the command argument contains whitespace 
 	PS> Set-Location ".\Program Files (x86)"
 
 ![Screenshot of a PowerShell console using double quotes for the set-location command](resources/screenshots/Screenshot-26-Quoting.png)
+
+----------
+
+## Backtick Escape Character (1) ##
+
+Since PowerShell is a Shell that needs to support Windows-style file systems, it cannot use the usual backslash (\) for escaping characters with a special meaning, but uses the backtick character instead (`):
+
+<table>
+<thead>
+<tr><td>Escape Sequence</td><td>Corresponding Special Character</td></tr>
+</thead>
+<tbody>
+<tr><td>`n</td><td>Newline</td></tr>
+<tr><td>`r</td><td>Return</td></tr>
+<tr><td>`t</td><td>Tab</td></tr>
+<tr><td>`a</td><td>Alert</td></tr>
+<tr><td>`b</td><td>&lt;Backspace&gt;</td></tr>
+<tr><td>`'</td><td>Single Quote (')</td></tr>
+<tr><td>`"</td><td>Double Quote (")</td></tr>
+<tr><td>`0</td><td>Null</td></tr>
+<tr><td>``</td><td>A single backtick (`)</td></tr>
+</tbody>
+</table>
+
+**Example: New-Line**
+
+	PS> Write-Host "Line1`nLine2"
+
+![Screenshot of the PowerShell console using the new-line escape sequence for the Write-Host command](resources/screenshots/Screenshot-27-Escape-Characters.png)
+
+----------
+
+## Backtick Escape Character (2) ##
+
+**Example: Tab**
+
+	PS> Write-Host "Key:`tvalue"
+
+![Screenshot of the PowerShell console using the tab escape sequence for the Write-Host command](resources/screenshots/Screenshot-28-Escape-Characters.png)
+
+**Example: Double Quotes**
+
+	PS> $value = "Lorem Ipsum"
+	PS> Write-Host "Key:`"$value`""
+
+![Screenshot of the PowerShell console using the double quote escape sequence for the Write-Host command](resources/screenshots/Screenshot-29-Escape-Characters.png)
