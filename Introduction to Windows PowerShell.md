@@ -641,3 +641,329 @@ Using the "syntax" property of an help object to display only the syntax section
 	PS> (get-help set-location).Syntax
 
 ![Screenshot of the PowerShell console displaying the results of the (get-help set-location).Syntax command](resources/screenshots/Screenshot-33-Help.png)
+
+----------
+
+# PowerShell Commands #
+
+----------
+
+## Command Types ##
+
+There are four kinds of command Windows PowerShell can execute:
+
+1.	**Cmdlets** [command-lets]<br/>
+.NET programs that are designed for PowerShell
+2.	**Scripts** (*.ps1)<br/>
+Scripts/Functions that live on the disk
+3.	**Functions**<br/>
+Scripts/Function that live only in memory
+4.	**Executables**<br/>
+All executable programs that are accesible through the [PATH](http://en.wikipedia.org/wiki/PATH_(variable)) variable (e.g. notepad.exe)
+
+----------
+
+## Common Cmdlets ##
+
+The most common commands/cmdlets are the ones you would also use to in your classical Windows cmd.exe command line:
+
+- **dir** (get-childitem)
+- **cd** (set-location)
+- **copy** (copy-item)
+- **move** (move-item)
+- **del** (remove-item)
+
+----------
+
+## Command Aliases ##
+
+tbd
+
+----------
+
+# PowerShell Drives #
+
+----------
+
+## PS Drives ##
+
+- Variables
+- Functions
+- Environment Variables
+
+----------
+
+# Pipelining #
+
+----------
+
+## Output Redirection ##
+
+tbd
+
+----------
+
+# Variables #
+
+----------
+
+## Environment variables ##
+
+tbd
+
+----------
+
+## Namespaces ##
+
+tbd
+
+----------
+
+# Strings, Wildcards and Regular Expressions #
+
+----------
+
+## String Formating ##
+
+tbd
+
+----------
+
+# Flow Control #
+
+----------
+
+## If/Else ##
+
+tbd
+
+----------
+
+## Switch ##
+
+tbd
+
+----------
+
+## Loops ##
+
+tbd
+
+----------
+
+# Fuctions #
+
+----------
+
+## Streaming ##
+
+----------
+
+
+# Types #
+
+----------
+
+## Using .NET Types ##
+
+	PS> (new-object System.Net.WebClient).DownloadString("http://www.google.com")
+
+----------
+
+# Scripts #
+
+----------
+
+# Errors and Exceptions #
+
+----------
+
+# Lessons #
+
+----------
+
+## Working with files and folders ##
+
+tbd
+
+----------
+
+## Parsing Text Files ##
+
+e.g. parsing log files
+
+----------
+
+## Accessing SQL Databases ##
+
+tbd
+
+----------
+
+## Using the Web Administration Module ##
+
+- Recycling an App Pool
+- Stopping a website
+- Enabling Maintenance
+
+----------
+
+## Writing a custom Cmdlet ##
+
+tbd
+
+----------
+
+## Debugging with PowerShell ISE ##
+
+tbd
+
+----------
+
+## Using .NET DLLs ##
+
+- CacheWarmup Tool
+- Commerce Server Connection String Switcher
+
+----------
+
+## Installing the Community Extensions (1) ##
+
+The [PowerShell Community extensions](http://pscx.codeplex.com/) (PSCX) are a PowerShell module that adds a lot of useful cmdlets to PowerShell:
+
+- **Edit-File**: Opens the specified text file in a text editor
+- **Show-Tree**: Shows the specified path as a tree
+- **Out-Speech**: Outputs text as spoken words
+- **Enable-OpenPowerShellHere**: Creates the registry entries required to create Windows Explorer context menu "Open PowerShell Here" for both Directories and Drives
+- **Format-Xml**: Pretty print XML
+- **Write-Zip**: Creates an ZIP Archive from the pipeline input
+- **New-Junction**: Creates an NTFS directory junction link (just like mklink.exe)
+- **Out-Clipboard**: Formats text via Out-String before placing in clipboard. Can also place string in clipboard as a file.
+
+and many more ...
+
+----------
+
+## Installing the Community Extensions (2) ##
+
+**Instructions**
+
+1. Create a PowerShell Profile if you don’t have one yet
+
+	if ((Test-Path $Profile) -eq $false)
+	{
+		New-Item $Profile -Type file -Force | Out-Null
+	}
+	
+	explorer (Split-Path $profile -parent)
+
+2. Extract the PSCX archive (“Pscx-2.0.0.1.zip”) into your PowerShell Profile Directory
+
+	C:\Users\Administrator\Documents\WindowsPowerShell\Modules
+
+3. Add an import statement to your PowerShell profile
+
+	Import-Module Pscx -arg "$(Split-Path $profile -parent)\Modules\Pscx\Pscx.UserPreferences.ps1"
+
+4.	Restart PowerShell
+
+----------
+
+## Installing the Community Extensions (3) ##
+
+Take the PowerShell Community Extension for a spin:
+
+- Use the Edit-File command
+- Use the clipboard commands and format-xml for formatting XML in memory
+- Enable the PowerShell Context Menu entry
+- Create a Zip-Archive
+- Use the Set-LocationEx command to remeber your previous location
+- Use the new-junktion command to create symbolic filesystem references
+
+**Links**
+
+- [PowerShell Community Extensions (PSCX)](http://pscx.codeplex.com/documentation)
+
+----------
+
+## Reading/Writing XML with PowerShell (1) ##
+
+PowerShell supports XML documents as a primitive data type.
+
+**Sample XML**
+
+	<Settings>
+		<Entry id="1">Value 1</Entry>
+		<Entry id="2">Value 2</Entry>
+		<Entry id="3">Value 3</Entry>
+	</Settings>
+
+**Reading XML**
+
+	[xml] $xml = Get-Content sample.xml
+	foreach ($setting in $xml.Settings.Entry)
+	{
+		Write-Host "$($setting.psbase.InnerText) (Id: $($setting.Id))"
+	}
+
+![Screenshot of the PowerShell console executing the reading-xml.ps1 script](Lessons/Reading-and-Writing-XML/Screenshots/Screenshot-01-Reading-XML.png)
+
+----------
+
+## Reading/Writing XML with PowerShell (2) ##
+
+**Writing XML**
+
+	# Read XML
+	[xml] $xml = Get-Content sample.xml
+	
+	# Create new node
+	$newEntry = $xml.CreateElement("Entry")
+	$newEntry.psbase.InnerText = "Value 4"
+	
+	# Create new node attribute
+	$idAttribute = $xml.CreateAttribute("id")
+	$idAttribute.psbase.Value = "4"
+	
+	# Assign new attribute to new node
+	$newEntry.SetAttributeNode($idAttribute)
+	
+	# Append new node
+	$xml.Settings.AppendChild($newEntry)
+	
+	# Save XML (Note: Use absolute paths for XML.Save())
+	$targetFile = Join-Path "$(Get-Location)" "sample-extended.xml"
+	$xml.save($targetFile)
+
+----------
+
+## Reading/Writing XML with PowerShell (3) ##
+
+![Screenshot of the PowerShell console executing the writing-xml.ps1 script](Lessons/Reading-and-Writing-XML/Screenshots/Screenshot-02-Writing-XML.png)
+
+----------
+
+## Signing PowerShell Scripts ##
+
+tbd
+
+----------
+
+## Automating Visual Studio with PowerConsole ##
+
+tbd
+
+----------
+
+## Creating a custom open-folder command ##
+
+tbd
+
+----------
+
+## Opening the current folder in the explorer ##
+
+tbd
+
+----------
+
