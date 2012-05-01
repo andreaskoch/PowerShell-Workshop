@@ -904,7 +904,47 @@ Join-Path, Convert-Path, Split-Path, Resolve-Path, Test-Path
 
 ----------
 
-# Pipelining #
+# Pipelines #
+
+----------
+
+## Pipelines (1) ##
+
+A pipeline is a series of commands connected by pipeline operators (|).
+Each pipeline operator sends the results of the preceding command to the next command.
+
+Send the **objects** that are returned by one command to be used as input to another command:
+
+	PS> Command-1 | Command-2 | Command-3
+
+Each command in the pipeline receives an object from the previous command, performs some operation on
+it, and then passes it along to the next command in the pipeline.
+
+![Anatomy of a PowerShell pipeline (source: Payette, Bruce; PowerShell in Action)](resources/screenshots/Screenshot-48-Anatomy-of-a-PowerShell-Pipeline.png)
+
+----------
+
+## Pipelines (2) ##
+
+**Example: Formatting the results of the Get-ChildItem cmdlet**
+
+Sending the results of the dir/get-childitem command directly to the format-table command - displaying only the file name and the directory of the found files.
+
+	PS> dir -Recurse -Filter *.ps1 | Format-Table Name,Directory
+
+![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: dir -Recurse -Filter *.ps1 | Format-Table Name,Directory](resources/screenshots/Screenshot-49-PowerShell-Pipelines.png)
+
+----------
+
+## Pipelines (3) ##
+
+**Example: Filtering the result of the Get-Process cmdlet**
+
+Using the Where-Object cmdlet to display only the process with the desired name (e.g. "chrome").
+
+	PS> Get-Process | Where-Object { $_.ProcessName -eq "chrome" }
+
+![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: Get-Process | Where-Object { $_.ProcessName -eq chrome }](resources/screenshots/Screenshot-50-PowerShell-Pipelines.png)
 
 ----------
 
