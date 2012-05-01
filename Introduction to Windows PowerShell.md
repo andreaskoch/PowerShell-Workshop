@@ -760,11 +760,14 @@ These are some of the alias that are used frequently:
 <tr><td>ls</td><td>Get-ChildItem</td><td>Transitional (UNIX)</td></tr>
 <tr><td>cls</td><td>Clear-Host</td><td>Transitional (Windows)</td></tr>
 <tr><td>gc</td><td>Get-Content</td><td>Convenience</td></tr>
+<tr><td>type</td><td>Get-Content</td><td>Transitional (Windows)</td></tr>
 <tr><td>cat</td><td>Get-Content</td><td>Transitional (UNIX)</td></tr>
 <tr><td>mkdir</td><td>New-Item -type directory</td><td>Transitional (Windows)</td></tr>
 <tr><td>rm</td><td>Remove-Item</td><td>Convenience</td></tr>
 <tr><td>del</td><td>Remove-Item</td><td>Transitional (Windows)</td></tr>
 <tr><td>rmdir</td><td>Remove-Item</td><td>Transitional (Windows)</td></tr>
+<tr><td>copy</td><td>Copy-Item</td><td>Transitional (Windows)</td></tr>
+<tr><td>cp</td><td>Copy-Item</td><td>Transitional (Unix)</td></tr>
 <tr><td>fm</td><td>Format-List</td><td>Convenience</td></tr>
 <tr><td>gm</td><td>Get-Member</td><td>Convenience</td></tr>
 <tr><td>foreach</td><td>Foreach-Object</td><td>Convenience</td></tr>
