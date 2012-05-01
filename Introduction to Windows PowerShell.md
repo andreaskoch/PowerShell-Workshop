@@ -787,13 +787,19 @@ To get a full list of all aliases use the **get-alias** command:
 
 ----------
 
-# Elastic Syntax #
+## Command Aliases (5) ##
 
-----------
+**Elastic Syntax**
 
-## Elastic Syntax (1) ##
+The idea of the command aliases is that PowerShell can be terse when needed and descriptive when appropriate.
+The syntax is concise for simple cases and can be stretched like an elastic band for larger problems.
 
-tbd
+This is important in a language that is both a command-line tool and a scripting language.
+
+**Rules for using command aliases **
+
+- Don't use command alias when you are scripting.
+- Use command aliases, when you need to get work done in the command-line and nobody but you needs to understand what you are doing.
 
 ----------
 
