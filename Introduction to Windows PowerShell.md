@@ -789,6 +789,21 @@ To get a full list of all aliases use the **get-alias** command:
 
 ## Command Aliases (5) ##
 
+For getting all aliases for a specific command use the *definition*-parameter for the *get-alias* command:
+
+	PS> get-alias -definition Remove-Item
+
+![Screenshot of the PowerShell console displaying the result of the get-alias -definition command for the remove-item command](resources/screenshots/Screenshot-43-Command-Aliases.png)
+
+**Resources**
+
+- PS> get-help about_aliases
+- PS> get-hel get-alias
+
+----------
+
+## Command Aliases (6) ##
+
 **Elastic Syntax**
 
 The idea of the command aliases is that PowerShell can be terse when needed and descriptive when appropriate.
