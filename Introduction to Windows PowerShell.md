@@ -795,10 +795,11 @@ For getting all aliases for a specific command use the *definition*-parameter fo
 
 ![Screenshot of the PowerShell console displaying the result of the get-alias -definition command for the remove-item command](resources/screenshots/Screenshot-43-Command-Aliases.png)
 
-**Resources**
+If you need more background information about PowerShell aliases, please refer to the PowerShell online help:
 
-- PS> get-help about_aliases
-- PS> get-hel get-alias
+	PS> get-help about_aliases
+
+	PS> get-help get-alias
 
 ----------
 
