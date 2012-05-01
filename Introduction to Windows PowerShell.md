@@ -798,8 +798,9 @@ This is important in a language that is both a command-line tool and a scripting
 
 **Rules for using command aliases **
 
-- Don't use command alias when you are scripting.
-- Use command aliases, when you need to get work done in the command-line and nobody but you needs to understand what you are doing.
+- Don't use command aliases when you are scripting.
+- Only use command aliases, when you need to get work done in the command-line<br/>
+(and nobody but yourself needs to understand what you are doing).
 
 ----------
 
