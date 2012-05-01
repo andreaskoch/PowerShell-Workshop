@@ -11,6 +11,14 @@
 
 ----------
 
+## Disclaimer ##
+
+I am not a PowerShell expert.
+
+Please take everything you'll see in this document with a grain of salt ;-)
+
+----------
+
 # Introduction to PowerShell #
 
 ----------
@@ -663,7 +671,7 @@ All executable programs that are accesible through the [PATH](http://en.wikipedi
 
 ----------
 
-## Common Cmdlets ##
+## Common Commands/Cmdlets ##
 
 The most common commands/cmdlets are the ones you would also use to in your classical Windows cmd.exe command line:
 
@@ -675,7 +683,112 @@ The most common commands/cmdlets are the ones you would also use to in your clas
 
 ----------
 
-## Command Aliases ##
+## Retrieving a list of Commands (1) ##
+
+In order to to get full list of all available comands you can use the "get-command" cmdlet:
+
+	PS> get-command
+
+![Screenshot of the PowerShell console displaying the result of the get-command cmdlet](resources/screenshots/Screenshot-36-Get-Command.png)
+
+----------
+
+## Retrieving a list of Commands (2) ##
+
+You can also use wildcards to search for commands for specific commands.
+
+**Get all commands that start with "write-":**
+
+	PS> get-command write-*
+
+![Screenshot of the PowerShell console displaying the result of the get-command write-* command](resources/screenshots/Screenshot-37-Get-Command-With-Wildcards.png)
+
+----------
+
+## Retrieving a list of Commands (3) ##
+
+**Get all commands that have the term "item" in the name:**
+
+	PS> get-command *item*
+
+![Screenshot of the PowerShell console displaying the result of the get-command write-* command](resources/screenshots/Screenshot-39-Get-Command-With-Wildcards.png)
+
+----------
+
+# Command Aliases #
+
+----------
+
+## Command Aliases (1) ##
+
+Since most of these command name are all following the verb-noun syntax, they are **self-explanatory** but also kind of **verbose**.
+
+**Examples of verbose commands:**
+
+- Set-Location
+- Where-Object
+- Remove-Item
+- Foreach-Object
+- Select-Object
+- Get-ChildItem
+- ...
+
+And thats why PowerShells comes with a large set of predefined aliases.
+
+----------
+
+## Command Aliases (2) ##
+
+Comand aliases are **concise** shortcuts to existing commands that enable you
+
+- use the command names you know and love<br/>(**transitional aliases** such as cd, mkdir, ...)
+- to get your work done fast<br/>(**convenience aliases** such as gc for get-content, sel instead of select-object)
+
+----------
+
+## Command Aliases (3) ##
+
+These are some of the alias that are used frequently:
+
+<table>
+<thead>
+<tr><td>Alias</td><td>Command</td><td>Alias Type</td></tr>
+</thead>
+<tbody>
+<tr><td>cd</td><td>Set-Location</td><td>Transitional (Windows)</td></tr>
+<tr><td>dir</td><td>Get-ChildItem</td><td>Transitional (Windows)</td></tr>
+<tr><td>ls</td><td>Get-ChildItem</td><td>Transitional (UNIX)</td></tr>
+<tr><td>cls</td><td>Clear-Host</td><td>Transitional (Windows)</td></tr>
+<tr><td>gc</td><td>Get-Content</td><td>Convenience</td></tr>
+<tr><td>cat</td><td>Get-Content</td><td>Transitional (UNIX)</td></tr>
+<tr><td>mkdir</td><td>New-Item -type directory</td><td>Transitional (Windows)</td></tr>
+<tr><td>rm</td><td>Remove-Item</td><td>Convenience</td></tr>
+<tr><td>del</td><td>Remove-Item</td><td>Transitional (Windows)</td></tr>
+<tr><td>rmdir</td><td>Remove-Item</td><td>Transitional (Windows)</td></tr>
+<tr><td>fm</td><td>Format-List</td><td>Convenience</td></tr>
+<tr><td>gm</td><td>Get-Member</td><td>Convenience</td></tr>
+<tr><td>foreach</td><td>Foreach-Object</td><td>Convenience</td></tr>
+<tr><td>where</td><td>Where-Object</td><td>Convenience</td></tr>
+</tbody>
+</table>
+
+----------
+
+## Command Aliases (4) ##
+
+To get a full list of all aliases use the **get-alias** command:
+
+	PS> get-alias
+
+![Screenshot of the PowerShell console displaying the result of the get-alias command](resources/screenshots/Screenshot-42-Command-Aliases.png)
+
+----------
+
+# Elastic Syntax #
+
+----------
+
+## Elastic Syntax (1) ##
 
 tbd
 
