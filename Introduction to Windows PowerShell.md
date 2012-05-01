@@ -820,15 +820,87 @@ This is important in a language that is both a command-line tool and a scripting
 
 ----------
 
-# PowerShell Drives #
+# PowerShell Providers #
 
 ----------
 
-## PS Drives ##
+## PowerShell Providers (1) ##
 
-- Variables
-- Functions
-- Environment Variables
+PowerShell providers are .NET programs that make serialized data available through a **filesystem-drive like format**.
+These drives are called **PowerShell Drives** or short **PSDrives**.
+
+- Filesystem like navigation through data and components
+- Reuse of the same cmdlets that are used for file system drives (set-location, get-childitem, new-item, remove-item, move-item, ...)
+- Universal support for wildcards
+
+![Screenshot of a Windows PowerShell console displaying the use of the IIS PowerShell Provider/Drive](resources/screenshots/Screenshot-44-PowerShell-Providers.png)
+
+----------
+
+## PowerShell Providers (2) ##
+
+Windows PowerShell comes with a number of built-in providers / PowerShell drives that you can use to access many different types of data stores.
+
+<table>
+<thead>
+<tr><td>Provider</td><td>Drive</td><td>Data Store</td></tr>
+</thead>
+<tbody>
+<tr><td>Alias</td><td>Alias:</td><td>Windows PowerShell aliases</td></tr>
+<tr><td>Certificate</td><td>Cert:</td><td>x509 certificates for digital signatures</td></tr>
+<tr><td>Environment</td><td>Env:</td><td>Windows environment variables</td></tr>
+<tr><td>FileSystem</td><td>C:, D:, ...</td><td>File system drives, directories, and files</td></tr>
+<tr><td>Function</td><td>Function:</td><td>Windows PowerShell functions</td></tr>
+<tr><td>Variable</td><td>Variable:</td><td>Windows PowerShell variables</td></tr>
+<tr><td>Registry</td><td>HKLM:, HKCU</td><td>Windows registry</td></tr>
+</tbody>
+</table>
+
+**Example: Navigation to the "Variable"-drive**
+
+	PS C:\Users\Administrator> cd variable:
+	PS Variable:\> dir
+
+![Screenshot of a Windows PowerShell console displaying the use of the variable: PowerShell drive](resources/screenshots/Screenshot-45-PowerShell-Providers.png)
+
+----------
+
+## PowerShell Providers (3) ##
+
+You can retrieve a list of all available PowerShell **providers** with the *Get-PSProvider* command:
+
+	PS> get-psprovider
+
+![Screenshot of a Windows PowerShell console displaying the result of the get-psprovider command](resources/screenshots/Screenshot-47-PowerShell-Providers.png)
+
+----------
+
+## PowerShell Providers (4) ##
+
+You can retrieve a list of all available PowerShell **drives** with the *Get-PSDrive* command:
+
+	PS> get-psdrive
+
+![Screenshot of a Windows PowerShell console displaying the result of the get-psdrive command](resources/screenshots/Screenshot-46-PowerShell-Providers.png)
+
+----------
+
+## PowerShell Providers (5) ##
+
+These are the cmdlets that will work for any PowerShell provider / drive.
+
+- **Childitem cmdlets**<br/>
+Get-ChildItem
+- **Content cmdlets**<br/>
+Add-Content, Clear-Content, Get-Content, Set-Content
+- **Item cmdlets**<br/>
+Clear-Item, Copy-Item, Get-Item, Invoke-Item, Move-Item, New-Item, Remove-Item, Rename-Item, Set-Item
+- **Item Property cmdlets**<br/>
+Clear-ItemProperty, Copy-ItemProperty, Get-ItemProperty, Move-ItemProperty, New-ItemProperty, Remove-ItemProperty, Rename-ItemProperty, Set-ItemProperty
+- **Location cmdlets**<br/>
+Get-Location, Pop-Location, Push-Location, Set-Location
+- ** Path cmdlets**<br/>
+Join-Path, Convert-Path, Split-Path, Resolve-Path, Test-Path
 
 ----------
 
@@ -948,6 +1020,12 @@ tbd
 ----------
 
 ## Writing a custom Cmdlet ##
+
+tbd
+
+----------
+
+## Creating a customer PowerShell Drive ##
 
 tbd
 
