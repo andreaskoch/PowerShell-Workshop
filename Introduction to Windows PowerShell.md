@@ -1224,7 +1224,11 @@ tbd
 
 ----------
 
-## Creating functions for clipboard access (1) ##
+# Creating functions for accessing the Clipboard #
+
+----------
+
+## Clipboard access (1) ##
 
 In this lesson we are going to extend your personal PowerShell profile with function for reading and writing from and to the clipboard.
 
@@ -1240,7 +1244,7 @@ The location of your PowerShell profile is stored in the $PROFILE variable:
 
 ----------
 
-## Creating functions for clipboard access (2) ##
+## Clipboard access (2) ##
 
 You can edit your profile script by entering:
 
@@ -1252,7 +1256,7 @@ In case you don’t have a profile script you will get a message like this:
 
 ----------
 
-## Creating functions for clipboard access (3) ##
+## Clipboard access (3) ##
 
 In order to create the profile script and open it with notepad enter this command:
 
@@ -1264,7 +1268,7 @@ Everything that you add to this script will be executed when you launch a new in
 
 ----------
 
-## Creating functions for clipboard access (4) ##
+## Clipboard access (4) ##
 
 In order to open the directory of the profile script you can enter:
 
@@ -1274,7 +1278,7 @@ In order to open the directory of the profile script you can enter:
 
 ----------
 
-## Creating functions for clipboard access (5) ##
+## Clipboard access (5) ##
 
 Now you can add the functions for reading and writing to and from the Windows Clipboard to your personal PowerShell profile:
 
@@ -1297,7 +1301,7 @@ Start a new instance of PowerShell and verify that your functions have been appl
 
 ----------
 
-## Creating functions for clipboard access (6) ##
+## Clipboard access (6) ##
  
 And now you can take your new functions “Get-ClipboardText” and “Out-Clipboard” out for a spin:
 
