@@ -1224,6 +1224,76 @@ tbd
 
 ----------
 
+# Customizing the PowerShell Console #
+
+----------
+
+## Customizing the PowerShell Console (1) ##
+
+Since PowerShell is hosted in the same console windows as the good old *cmd.exe*, it will look exactly like good old *cmd.exe* if you start it using the *PowerShell.exe*.
+
+![Screenshot of an un-customized PowerShell console window](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-01-Windows-PowerShell-Console-Without-Customization.png)
+
+----------
+
+## Customizing the PowerShell Console (2) ##
+
+If you want the same look and feel you get, if you open the PowerShell from a shortcut or your Windows start menu ...
+
+![Screenshot of an PowerShell console window with the classic PowerShell look](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-02-Windows-PowerShell-Console-With-Classic-PowerShell-Look.png)
+
+... you can assign your desired console window style in your personal PowerShell profile.
+
+----------
+
+## Customizing the PowerShell Console (3) ##
+
+Open your PowerShell profile in a text editor:
+
+	PS> notepad $profile
+
+Then add the following code to your PowerShell profile:
+
+	$consoleUi = (Get-Host).UI.RawUI
+	
+	# Set Colors
+	$consoleUi.BackgroundColor = "DarkBlue"
+	$consoleUi.ForegroundColor = "White"
+	
+	# Set Window Size
+	$width = 120
+	$height = 50
+	
+	$consoleBufferSize = $consoleUi.BufferSize
+	$consoleBufferSize.Width = $width + 10
+	$consoleBufferSize.Height = $height * 10
+	$consoleUi.BufferSize = $consoleBufferSize
+	
+	$consoleWindowSize = $consoleUi.WindowSize
+	$consoleWindowSize.Width = $width
+	$consoleWindowSize.Height = $height
+	$consoleUi.WindowSize = $consoleWindowSize
+	
+	# Set Window Title
+	$consoleUi.WindowTitle = "PowerShell"
+	
+	# Apply Changes
+	Clear-Host
+
+----------
+
+## Customizing the PowerShell Console (4) ##
+
+![Screenshot showing the how the PowerShell customization code can be added to the PowerShell profile](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-07-Set-Style-In-PowerShell-Profile.png)
+
+----------
+
+## Customizing the PowerShell Console (5) ##
+
+![Screenshot showing a customized PowerShell console](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-10-Set-Style-In-PowerShell-Profile.png)
+
+----------
+
 # Creating functions for accessing the Clipboard #
 
 ----------
