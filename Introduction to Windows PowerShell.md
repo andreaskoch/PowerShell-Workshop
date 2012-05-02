@@ -948,9 +948,51 @@ Using the Where-Object cmdlet to display only the process with the desired name 
 
 ----------
 
-## Output Redirection ##
+# Output Redirection #
 
+----------
+
+## Output Redirection (1) ##
+
+By default, Windows PowerShell sends all output to the console, but like all shell languages PowerShell has the ability to **direct the output to a text file** instead.
+
+- output redirection
+	- Use the ">" operator to write the output directly to a file
+	- Use the ">>" operator to **append** the output to a file
+- error redirection
+	- Use the "2>" operator to write **errors** to a file
+	- Use the "2>>" operator to **append** errors to a file
+	- Use the "2>&1" operator to write error messages to the output pipe instead of the error pipe
+
+----------
+
+## Output Redirection (2) ##
+
+**Examples**
+
+- fdsfd
+
+----------
+
+## Output Redirection (2) ##
+
+**Whats is the difference between Pipelining and Output Redirection?**
+
+- Output redirection is specifically for files and not for commands
+- There is no (real) difference between piping and redirection
+- Output redirection with the redirection operators (>, >>, 2>, 2>>, 2>&1) are **syntactic sugar** for something you would otherwise accomplish with a pipe character (|) and the *out-file* cmdlet.
+
+Table comparing examples
 tbd
+
+----------
+
+## Output Redirection (3) ##
+
+**Resources**
+
+- [get-help about_Redirection](http://technet.microsoft.com/en-us/library/dd315283.aspx)
+- [get-help about_Pipelines](http://technet.microsoft.com/en-us/library/dd347624.aspx)
 
 ----------
 
