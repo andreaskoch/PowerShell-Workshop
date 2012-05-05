@@ -952,7 +952,7 @@ Using the Where-Object cmdlet to display only the process with the desired name 
 
 ----------
 
-## Output Redirection (1) ##
+## Output Redirection ##
 
 By default, Windows PowerShell sends all output to the console, but like all shell languages PowerShell has the ability to **direct the output to a text file** instead.
 
@@ -966,33 +966,116 @@ By default, Windows PowerShell sends all output to the console, but like all she
 
 ----------
 
-## Output Redirection (2) ##
-
-**Examples**
-
-- fdsfd
+# Output Redirection Example #
 
 ----------
 
-## Output Redirection (2) ##
+## Output Redirection: Example (1) ##
+
+Content of *myScript.ps1*
+
+![Screenshot showing the content of the someScript.ps1 PowerShell script](resources/screenshots/Screenshot-57-Output-Redirection.png)
+
+	$fileName = "test.txt"
+	
+	
+	"Fetching file (`$fileName = $fileName)."
+	if (!(Test-Path $fileName))
+	{
+	    "This will cause an error, because a file with the
+	    name '$fileName' does not exist in the current folder"
+	}
+	
+	Get-Item $fileName
+
+----------
+
+## Output Redirection: Example (2) ##
+
+	PS> .\myScript.ps1
+
+![Screenshot showing the result of the someScript.ps1 PowerShell script](resources/screenshots/Screenshot-51-Output-Redirection.png)
+
+When you execute the script "someScript.ps1" you will get a result which looks something like you can see in the screenshot above:
+
+1. The **message** "Fetching file ..."
+2. The **message** "This will cause an error ..." because the file "test.txt" does not exist
+3. An **error** caused by the *get-item* command
+
+----------
+
+## Output Redirection: Example (3) ##
+
+Now you can redirect the output of the script to a file with the ">" operator:
+
+	PS> .\someScript.ps1 > ..\output-of-someScript.txt
+
+![Screenshot showing the output of the someScript.ps1 PowerShell script which is redirected to a text file whereas the errors are printed to the console window](resources/screenshots/Screenshot-53-Output-Redirection.png)
+
+- Only the output is redirected to the the text file
+- The error message is printed to the console window
+
+----------
+
+# Error Redirection Example #
+
+----------
+
+## Error Redirection: Example (1) ##
+
+In order to redirect only the error messages to a file you can use the "2>" operator:
+
+	PS> .\someScript.ps1 2> ..\output-of-someScript.txt
+
+![Screenshot showing the result of the someScript.ps1 PowerShell script in the console window whereas the error is redirected to a text file](resources/screenshots/Screenshot-54-Output-Redirection.png)
+
+- Only the error is redirected to the the text file
+- The message output is printed to the console window
+
+----------
+
+## Error Redirection: Example (2) ##
+
+With the "2>&1" operator you can force PowerShell to redirect error messages to the normal success-output-stream.
+
+	PS> .\someScript.ps1 > ..\output.txt
+
+![Screenshot showing the result of the ](resources/screenshots/Screenshot-58-Output-Redirection.png)
+
+----------
+
+## Error Redirection: Example (3) ##
+
+Output that would normally be redirected to the console window (error stream) is now treated as if it was normal output and is sent to the success stream (output.txt):
+
+	PS> .\someScript.ps1 > ..\output.txt 2>&1
+
+![Screenshot showing the result of the ](resources/screenshots/Screenshot-59-Output-Redirection.png)
+
+----------
+
+## Output Redirection vs. Pipelines ##
 
 **Whats is the difference between Pipelining and Output Redirection?**
 
 - Output redirection is specifically for files and not for commands
 - There is no (real) difference between piping and redirection
-- Output redirection with the redirection operators (>, >>, 2>, 2>>, 2>&1) are **syntactic sugar** for something you would otherwise accomplish with a pipe character (|) and the *out-file* cmdlet.
+- Output redirection with the redirection operators (>, >>) are **syntactic sugar** for something you would otherwise accomplish with a pipe character (|) and the *out-file* cmdlet.
 
 Table comparing examples
 tbd
 
+**Note:** Error Redirection cannot be done as easily with pipelines.
+
 ----------
 
-## Output Redirection (3) ##
+## Output Redirection: Resources ##
 
-**Resources**
+Resources about output- and error-redirection and pipelines:
 
 - [get-help about_Redirection](http://technet.microsoft.com/en-us/library/dd315283.aspx)
 - [get-help about_Pipelines](http://technet.microsoft.com/en-us/library/dd347624.aspx)
+- [get-help out-file](http://technet.microsoft.com/en-us/library/dd315303.aspx)
 
 ----------
 
