@@ -3238,10 +3238,18 @@ Get-Item $fileName
 <li>Output redirection is specifically for files and not for commands</li>
 <li>There is no (real) difference between piping and redirection</li>
 <li>Output redirection with the redirection operators (&gt;, &gt;&gt;) are <strong>syntactic sugar</strong> for something you would otherwise accomplish with a pipe character (|) and the <em>out-file</em> cmdlet.</li>
+<li><strong>Note:</strong> Error redirection cannot be done as easily with pipelines.</li>
 </ul>
-<p>Table comparing examples
-tbd</p>
-<p><strong>Note:</strong> Error Redirection cannot be done as easily with pipelines.</p></section>
+<p><strong>Pipeline equivalent for the &gt; Operator</strong></p>
+<pre><code>PS&gt; someScript.ps1 &gt; output.txt
+
+PS&gt; someScript.ps1 | Out-File -Path output.txt
+</code></pre>
+<p><strong>Pipeline equivalent for the &gt;&gt; Operator</strong></p>
+<pre><code>PS&gt; someScript.ps1 &gt;&gt; output.txt
+
+PS&gt; someScript.ps1 | Out-File -Path output.txt -Append
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">

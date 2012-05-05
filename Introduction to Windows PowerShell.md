@@ -1061,11 +1061,19 @@ Output that would normally be redirected to the console window (error stream) is
 - Output redirection is specifically for files and not for commands
 - There is no (real) difference between piping and redirection
 - Output redirection with the redirection operators (>, >>) are **syntactic sugar** for something you would otherwise accomplish with a pipe character (|) and the *out-file* cmdlet.
+- **Note:** Error redirection cannot be done as easily with pipelines.
 
-Table comparing examples
-tbd
+**Pipeline equivalent for the > Operator**
 
-**Note:** Error Redirection cannot be done as easily with pipelines.
+	PS> someScript.ps1 > output.txt
+
+	PS> someScript.ps1 | Out-File -Path output.txt
+
+**Pipeline equivalent for the >> Operator**
+
+	PS> someScript.ps1 >> output.txt
+
+	PS> someScript.ps1 | Out-File -Path output.txt -Append
 
 ----------
 
