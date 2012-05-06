@@ -1091,13 +1091,213 @@ Resources about output- and error-redirection and pipelines:
 
 ----------
 
-## Environment variables ##
+## Variables: Overview (1) ##
 
-tbd
+A variable is a unit of memory in which values are stored.
+
+- Variables are represented by single-word text strings that begin with the dollar sign ($), and can contain any alphanumeric characters as well as underscores [a-z0-9_!?öäüéèß ...]
+
+	Examples:
+
+	$a, $process, $my_var, $müsli, $straße
+
+- If you want to define variables with special characters (whitespace, dash, ...) in its name you have to use this syntax:
+
+	${This is söme spécial! variable-name} = "Some Value"
+
+- Variables can store any type of object (integers, strings, arrays, hash tables, ...)
+
+----------
+
+## Variables: Overview (2) ##
+
+- There is no such thing as an uninitialized variable
+	- PowerShell variables are not declared; they are just created as need on first assignment
+	- If you reference a variable that does not exist yet, the system will return the value $null (unlike JavaScript)
+- All variables are accessible via a "Variable" PowerShell Provider / PowerShell Drive
+- There are three different types of variables in Windows PowerShell:
+	1. User-created variables 
+	2. Automatic variables
+	3. Preference variables
+
+----------
+
+## User-created variables ##
+
+- User-created variables are only available in the session in which you create them
+- If you want a certain variable in every PowerShell session you have to add the variable to your PowerShell profile ($profile)
+- You can also created variables with global, script, or local scope
+
+![Screenshot showing user-created variables from the PowerShell profile in a PowerShell session via the get-variable cmdlet](resources/screenshots/Screenshot-65-Variables-User-Created-Profile-Variables.png)
+
+----------
+## Automatic Variables ##
+
+Automatic variables are created by Windows PowerShell and are used to store its state.
+
+<table>
+<thead>
+<tr>
+	<td>Variable</td>
+	<td>Description</td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>$$</td>
+	<td>Contains the last token in the last line received by the session.</td>
+</tr>
+
+<tr>
+	<td>$?</td>
+	<td>Contains the execution status of the last operation. It contains TRUE if the last operation succeeded and FALSE if it failed.</td>
+</tr>
+
+<tr>
+	<td>$^</td>
+	<td>Contains the first token in the last line received by the session.</td>
+</tr>
+
+<tr>
+	<td>$_</td>
+	<td>Contains the current object in the pipeline object.</td>
+</tr>
+
+<tr>
+	<td>$Args</td>
+	<td>Contains an array of the undeclared parameters and/or parameter values that are passed to a function, script, or script block.</td>
+</tr>
+
+<tr>
+	<td>$Error</td>
+	<td>Contains an array of error objects that represent the most recent errors.</td>
+</tr>
+
+<tr>
+	<td>$False</td>
+	<td>Contains FALSE.</td>
+</tr>
+
+<tr>
+	<td>$ForEach</td>
+	<td>Contains the enumerator of a ForEach-Object loop.</td>
+</tr>
+
+<tr>
+	<td>$Home</td>
+	<td>Contains the full path of the user's home directory.</td>
+</tr>
+
+<tr>
+	<td>$Host</td>
+	<td>Contains an object that represents the current host application for Windows PowerShell.</td> 
+</tr>
+
+<tr>
+	<td>$LastExitCode</td>
+	<td>Contains the exit code of the last Windows-based program that was run.</td>
+</tr>
+
+<tr>
+	<td>$Matches</td>
+	<td>The $Matches variable works with the -match and -not match operators.</td>
+</tr>
+
+<tr>
+	<td>$MyInvocation</td>
+	<td>Contains an object with information about the current command, such as a script, function, or script block.</td>
+</tr>
+
+<tr>
+	<td>$NULL</td>
+	<td>Contains a NULL or empty value.</td>
+</tr>
+
+<tr>
+	<td>$PID</td>
+	<td>Contains the process identifier (PID) of the process that is hosting the current Windows PowerShell session.</td>
+</tr>
+
+<tr>
+	<td>$Profile</td>
+	<td>Contains the full path of the Windows PowerShell profile for the current user and the current host application.</td>
+</tr>
+
+<tr>
+	<td>$PsHome</td>
+	<td>Contains the full path of the installation directory for Windows PowerShell, typically, %windir%\System32\WindowsPowerShell\v1.0.</td> 
+</tr>
+
+<tr>
+	<td>$Pwd</td>
+	<td>Contains a path object that represents the full path of the current directory.</td> 
+</tr>
+
+<tr>
+	<td>$This</td>
+	<td>In a script block that defines a script property or script method, the $This variable refers to the object that is being extended.</td> 
+</tr>
+
+<tr>
+	<td>$True</td>
+	<td>Contains TRUE. You can use this variable to represent TRUE in commands and scripts.</td>
+</tr>
+</tbody>
+</table>
+
+----------
+
+## Working with Variables (1) ##
+
+Use the *get-variable* cmdlet to get a list of all variables in your current PowerShell session:
+
+	PS> get-variable
+
+![Screenshot showing the results of the get-variable command](resources/screenshots/Screenshot-62-Variables-Get-Variable.png)
+
+----------
+
+## Working with Variables (2) ##
+
+Use wildcards for the *get-variable* cmdlet to search for variables:
+
+	PS> get-variable p*
+
+![Screenshot showing the results of the get-variable p* command with wildcards](resources/screenshots/Screenshot-63-Variables-Get-Variable.png)
+
+	PS> get-variable -Name p* -Exclude ps*
+
+![Screenshot showing the results of the get-variable -Name p* -Exclude Ps* command with wildcards](resources/screenshots/Screenshot-64-Variables-Get-Variable.png)
+
+----------
+
+## Automatic Variables ##
+
+Variables like $null, $true and $false are special constant variables that cannot be changed.
+
+----------
+
+## Variables (X) ##
+
+Resources
+
+- [get-help about_Variables](http://technet.microsoft.com/en-us/library/dd347604.aspx)
+- [get-help about_Automatic_Variables]()
+- [get-help about_Preference_Variables]()
+
+----------
+
+# Operators #
 
 ----------
 
 ## Namespaces ##
+
+tbd
+----------
+
+## Environment variables ##
 
 tbd
 
