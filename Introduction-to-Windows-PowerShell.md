@@ -1559,7 +1559,54 @@ This statement of the PowerShell foreach loop is syntactically identical to the 
 
 ----------
 
-## Streaming ##
+## Functions (1) ##
+
+Functions are one of the four command types supported by PowerShell.
+
+**Syntax**
+
+	function <name> (<parameter list>)
+	{
+		<statement list>
+	}
+
+**Calling Functions**
+
+Functions are called like cmdlets.
+
+	PS> SampleFunction -ParameterName1 Value1 -ParameterName2 Value2
+
+----------
+
+## Functions (2) ##
+
+**Example**
+
+	function Hello ($Name = "World")
+	{
+		"Hello $name"
+	}
+
+	PS> Hello -Name PowerShell
+	Hello PowerShell
+
+	PS> Hello
+	Hello World
+
+![Screenshot of the Hello Sample function](resources/screenshots/Screenshot-76-Functions-Example-Hello-World.png)
+
+----------
+
+## Functions (3) ##
+
+**Function PowerShell Provider**
+
+You can access all function in your current PowerShell session via the Function-provider.
+
+	PS C:\Users\Administrator> set-location function:
+	PS Function:\> dir
+
+![Screenshot of a PowerShell console showing the contents of the Function: PowerShell Drive](resources/screenshots/Screenshot-75-Functions-PowerShell-Drive.png)
 
 ----------
 
