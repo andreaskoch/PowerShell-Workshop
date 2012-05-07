@@ -1373,7 +1373,7 @@ PowerShell supports all the compound operators that are found in C-based languag
 These are the comparison operators that are supported by PowerShell.
 
 - Equals (-eq)
-- Not Equals (-neq)
+- Not Equals (-ne)
 - Greater Than (-gt)
 - Less than (-lt)
 - Collection contains value (-contains)
@@ -1408,21 +1408,150 @@ For more information please refer to the help section:
 
 ----------
 
-## If/Else ##
+## Flow Control: If/Else Statement ##
 
-tbd
+The syntax of the PowerShell if-statement based on the **C-syntax**:
+
+	if (<condition>)
+	{
+		<statement list>
+	}
+	elseif (<condition>)
+	{
+		<statement list>
+	}
+	else
+	{
+		<statement list>
+	}
+
+Which two exceptions:
+
+- Curly-Braces ({ }) are mandatory
+- The else-if keyword must be written without white space in between
 
 ----------
 
-## Switch ##
+## Flow Control: Switch Statement ##
 
-tbd
+The switch statement is the most powerful statement in the PowerShell language.
+
+It combines
+
+- pattern matching,
+- branching,
+- and iteration
+
+all into a single control structure.
+
+**Syntax**
+
+	switch -option (value)
+	{
+		<pattern>
+		{
+			<statement list>
+		}
+		
+		default
+		{
+			<statement list>
+		}
+	}
 
 ----------
 
-## Loops ##
+## Flow Control: While Loop ##
 
-tbd
+Again, the while loop has the same syntax as in most C-based languages:
+
+	while (condition)
+	{
+		<statement list>
+	}
+
+**Example**
+
+	$index = 0
+	while($val -ne 3)
+	{
+		$index++
+		write-host "The number is $index"
+	}
+
+![Screenshot of a simple while loop in the PowerShell console](resources/screenshots/Screenshot-71-Flow-Control-While-Loop.png)
+
+----------
+
+## Flow Control: Do-While Loop ##
+
+The do-while loop follows the same structure like the while loop: 
+
+	do
+	{
+		<statement list>
+	}
+	while (condition)
+
+**Example**
+
+	$index = 0
+	do
+	{
+		$index++
+		write-host "The number is $index"
+	}
+	while ($val -ne 3)
+
+![Screenshot of a simple do-while loop in the PowerShell console](resources/screenshots/Screenshot-72-Flow-Control-Do-While-Loop.png)
+
+----------
+
+## Flow Control: For-Loop ##
+
+The for loop is the basic counting loop in PowerShell. It’s typically used to step though a collection of objects.
+
+It’s not used as often in PowerShell as in other languages because there are frequently better ways of processing a collection (see: **foreach**).
+
+**Syntax**
+
+	for (<initialization pipeline>; <test pipeline>; <increment pipeline>)
+	{
+		<statement list>
+	}
+
+**Example**
+
+	$numbers = 1..10
+	for ($index = 0; $index -lt $numbers.Length; $index++)
+	{
+		Write-Host "$numbers[$index]"
+	}
+
+![Screenshot of a simple for loop in the PowerShell console](resources/screenshots/Screenshot-73-Flow-Control-For-Loop.png)
+
+----------
+
+## Flow Control: Foreach Loop ##
+
+This statement of the PowerShell foreach loop is syntactically identical to the C# foreach loop with the exception that you don’t have to declare the type of the loop variable.
+
+**Syntax**
+
+	foreach (<variable> in <collection>)
+	{
+		<statement list>
+	}
+
+**Example**
+
+	$numbers = 1..10
+	foreach ($entry in $numbers)
+	{
+		Write-Host $entry
+	}
+
+![Screenshot of a simple foreach loop in the PowerShell console](resources/screenshots/Screenshot-74-Flow-Control-Foreach-Loop.png)
 
 ----------
 
