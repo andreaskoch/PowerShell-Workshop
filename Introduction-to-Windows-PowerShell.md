@@ -1343,19 +1343,64 @@ Or you can access environment variables with their **scope modifier** "$env:<var
 
 ----------
 
-## Scope ##
+## Arithmetic Operators ##
 
-tbd
+- Addition (2+2)
+- Multiplication (2*2)
+- Subtraction (2-1)
+- Dividation (10 / 5)
+- Modulus (7 % 4)
+
+![Screenshot showing the use of arithmetic operators in the PowerShell console](resources/screenshots/Screenshot-70-Arithmetic-Operators.png)
 
 ----------
 
-# Strings, Wildcards and Regular Expressions #
+## Assignment Operators ##
+
+PowerShell supports all the compound operators that are found in C-based languages such as C#.
+
+- Assignment ($a = 3)
+- Addition ($a += 2)
+- Subtraction ($a -= 1)
+- Multiplication ($a *= 2)
+- Dividation ($a /= 2)
+- Modulus ($a %= 3)
 
 ----------
 
-## String Formating ##
+## Comparion Operators ##
 
-tbd
+These are the comparison operators that are supported by PowerShell.
+
+- Equals (-eq)
+- Not Equals (-neq)
+- Greater Than (-gt)
+- Less than (-lt)
+- Collection contains value (-contains)
+- Collection does not contain value (-notcontains)
+
+By default, all of these operators are **case insensitive**. But there is also and case sensitive versions for each operator.
+For more information please refer to the help section:
+
+- [get-help about_Comparison_Operators](http://technet.microsoft.com/en-us/library/dd315321.aspx)
+
+----------
+
+## Pattern Matching Operators ##
+
+**Wildcards**
+
+- String matches wildcard pattern (-like)
+- String does not match wildcard pattern (-notlike)
+
+**Regular Expression Matching**
+
+- String matches regular expression (-match)
+- String does not match regular expression (-notmatch)
+
+**Regular Expression Replacement**
+
+- Regular expression subscript substitution (-replace)
 
 ----------
 
