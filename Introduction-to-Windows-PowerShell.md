@@ -1248,6 +1248,31 @@ Automatic variables are created by Windows PowerShell and are used to store its 
 
 ----------
 
+## Preference Variables ##
+
+Windows PowerShell includes a set of variables that enable you to customize its behavior. These "preference variables" work like the     options in GUI-based systems.
+
+**Example: $OFS - The Default Space Character**
+
+By default the $OFS variable is set to a single whitespace character (" "):
+
+	PS> $data = 1,2,3,4,5,6,7,8,9
+	PS> [string] $data
+	1 2 3 4 5 6 7 8 9
+
+But you can change the value if you like:
+
+	PS> $OFS = ","
+	PS> $data = 1,2,3,4,5,6,7,8,9
+	PS> [string] $data
+	1,2,3,4,5,6,7,8,9
+
+For more information about preference variables use the PowerShell help:
+	
+	PS> get-help about_Preference_Variables
+
+----------
+
 ## Working with Variables (1) ##
 
 Use the *get-variable* cmdlet to get a list of all variables in your current PowerShell session:
@@ -1272,19 +1297,45 @@ Use wildcards for the *get-variable* cmdlet to search for variables:
 
 ----------
 
-## Automatic Variables ##
+## Working with Variables (3) ##
 
-Variables like $null, $true and $false are special constant variables that cannot be changed.
+Use can use the **Variable PowerShell Provider** to access variables.
+
+	PS C:\Users\Administrator> set-location variable:
+	PS Variable:\> dir
+
+![Screenshot of a PowerShell console displaying the contents of the Variable: PowerShell drive](resources/screenshots/Screenshot-67-Variable-PowerShell-Drive.png)
 
 ----------
 
-## Variables (X) ##
+## Working with Variables (4) ##
 
-Resources
+You can use the **Environment PowerShell Provider** to access the variables from the $env scope:
+
+	PS C:\Users\Administrator> set-location Env:
+	PS Env:\> dir
+
+![Screenhot of a PowerShell console displaying the content of the Env: PowerShell drive](resources/screenshots/Screenshot-68-Environment-Variables.png)
+
+----------
+
+## Working with Variables (5) ##
+
+Or you can access environment variables with their **scope modifier** "$env:<variablename>".
+
+	PS C:\Users\Administrator> set-location $env:SystemRoot
+	PS C:\Windows\>
+
+![Sample usage of the $env:SystemRoot environment variable](resources/screenshots/Screenshot-69-Environment-Variables.png)
+
+----------
+
+## Variables: Resources ##
 
 - [get-help about_Variables](http://technet.microsoft.com/en-us/library/dd347604.aspx)
-- [get-help about_Automatic_Variables]()
-- [get-help about_Preference_Variables]()
+- [get-help about_Automatic_Variables](http://technet.microsoft.com/en-us/library/dd347675.aspx)
+- [get-help about_Preference_Variables](http://technet.microsoft.com/en-us/library/dd347731.aspx)
+- [get-help about_Scopes](http://technet.microsoft.com/en-us/library/dd315289.aspx)
 
 ----------
 
@@ -1292,12 +1343,7 @@ Resources
 
 ----------
 
-## Namespaces ##
-
-tbd
-----------
-
-## Environment variables ##
+## Scope ##
 
 tbd
 
