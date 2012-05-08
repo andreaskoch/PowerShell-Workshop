@@ -1882,57 +1882,6 @@ You can pass arguments to a PowerShell script in the same way you do it for func
 
 ----------
 
-## Working with files and folders ##
-
-tbd
-
-----------
-
-## Parsing Text Files ##
-
-e.g. parsing log files
-
-----------
-
-## Accessing SQL Databases ##
-
-tbd
-
-----------
-
-## Using the Web Administration Module ##
-
-- Recycling an App Pool
-- Stopping a website
-- Enabling Maintenance
-
-----------
-
-## Writing a custom Cmdlet ##
-
-tbd
-
-----------
-
-## Creating a customer PowerShell Drive ##
-
-tbd
-
-----------
-
-## Debugging with PowerShell ISE ##
-
-tbd
-
-----------
-
-## Using .NET DLLs ##
-
-- CacheWarmup Tool
-- Commerce Server Connection String Switcher
-
-----------
-
 ## Installing the Community Extensions (1) ##
 
 The [PowerShell Community extensions](http://pscx.codeplex.com/) (PSCX) are a PowerShell module that adds a lot of useful cmdlets to PowerShell:
@@ -2046,30 +1995,6 @@ PowerShell supports XML documents as a primitive data type.
 ## Reading/Writing XML with PowerShell (3) ##
 
 ![Screenshot of the PowerShell console executing the writing-xml.ps1 script](Lessons/Reading-and-Writing-XML/Screenshots/Screenshot-02-Writing-XML.png)
-
-----------
-
-## Signing PowerShell Scripts ##
-
-tbd
-
-----------
-
-## Automating Visual Studio with PowerConsole ##
-
-tbd
-
-----------
-
-## Creating a custom open-folder command ##
-
-tbd
-
-----------
-
-## Opening the current folder in the explorer ##
-
-tbd
 
 ----------
 
@@ -2236,3 +2161,69 @@ And now you can take your new functions “Get-ClipboardText” and “Out-Clipb
 - [Using the Add-Type Cmdlet](http://technet.microsoft.com/en-US/library/dd315241.aspx)
 - [Using the New-Object Cmdled](http://technet.microsoft.com/en-US/library/dd315334.aspx)
 - [The .NET TextBox Class](http://msdn.microsoft.com/en-us/library/system.windows.forms.textbox.aspx)
+
+----------
+
+## Working with files and folders ##
+
+tbd
+
+----------
+
+## Parsing Text Files ##
+
+e.g. parsing log files
+
+----------
+
+## Accessing SQL Databases ##
+
+tbd
+
+----------
+
+## Using the Web Administration Module ##
+
+- Recycling an App Pool
+- Stopping a website
+- Enabling Maintenance
+
+----------
+
+## Writing a custom Cmdlet ##
+
+tbd
+
+----------
+
+## Creating a customer PowerShell Drive ##
+
+tbd
+
+----------
+
+## Debugging with PowerShell ISE ##
+
+tbd
+
+----------
+
+## Using .NET DLLs ##
+
+- CacheWarmup Tool
+- Commerce Server Connection String Switcher
+## Signing PowerShell Scripts ##
+
+tbd
+
+----------
+
+## Creating a custom open-folder command ##
+
+tbd
+
+----------
+
+## Creating a file-system watcher ##
+
+tbd
