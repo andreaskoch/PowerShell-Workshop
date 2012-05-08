@@ -1859,8 +1859,23 @@ Example:
 
 ----------
 
-# Errors and Exceptions #
+## PowerShell Scripts ##
 
+- A PowereShell Script is just a piece of code store in a text file with a *.ps1 extension
+
+You can execute PowerShell Scripts from your command line like this:
+
+	PS> .\someScript.ps1
+
+You can pass arguments to a PowerShell script in the same way you do it for functions.
+
+**Positional script arguments**
+	
+	PS> .\someScript.ps1 Argument1 Argument2
+
+**Named script arguments**
+
+	PS> .\someScript.ps1 -ParameterName1 "Parameter Value 1"
 ----------
 
 # Lessons #
