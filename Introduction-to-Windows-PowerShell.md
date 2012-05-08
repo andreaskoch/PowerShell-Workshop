@@ -1882,6 +1882,18 @@ You can pass arguments to a PowerShell script in the same way you do it for func
 
 ----------
 
+## Debugging with PowerShell ISE ##
+
+Live-Demo
+
+![Screenshot of a debugging session with PowerShell ISE](Lessons/Debugging-with-PowerShell-ISE/Screenshots/Screenshot-03.png)
+
+----------
+
+# PowerShell Community Extensions #
+
+----------
+
 ## Installing the Community Extensions (1) ##
 
 The [PowerShell Community extensions](http://pscx.codeplex.com/) (PSCX) are a PowerShell module that adds a lot of useful cmdlets to PowerShell:
@@ -2236,12 +2248,6 @@ tbd
 ----------
 
 ## Creating a customer PowerShell Drive ##
-
-tbd
-
-----------
-
-## Debugging with PowerShell ISE ##
 
 tbd
 
