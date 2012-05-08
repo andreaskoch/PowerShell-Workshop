@@ -1758,12 +1758,98 @@ Example: A function which uses the **return statement** to exit early
 
 ----------
 
-
 # Types #
 
 ----------
 
+## Basic Types ##
+
+- string (System.String)
+- int (System.Int32)
+- long (System.Int64)
+- double (System.Double)
+- decimal (System.Decimal)
+
+----------
+
+## Arrays ##
+
+Arrays in PowerShell are simply defined by using a comma (,).
+
+	PS> $arrayOfNumbers = 1,2,3,4,5
+
+They are *origin-zero*:
+
+	PS> $arrayOfStrings = "Value 1", "Value 2", "Value 3"
+	PS> $arrayOfStrings[0]
+	"Value 1"
+
+The size can be determined using the *Length* property:
+
+	PS> $letters = "a", "b", "c"
+	PS> $number.Length
+	3
+
+Empty arrays can be specified like this:
+
+	PS> $emptyArray = @()
+	PS> $emptyArray.Length
+	0
+
+----------
+
+## Hashtables (1) ##
+
+PowerShell Hashtables relate to the .NET System.Collections.Hashtable type.
+
+You can create them using hash literals:
+
+	PS> $keyvaluestore = @{ Key1 = "Value1"; Key2 = "Value "; Key3 = "Value 3" }
+	$keyvaluestore
+
+![Screenshot of a simple PowerShell Hashtable](resources/screenshots/Screenshot-82-Types-Hashtables.png)
+
+You can get a list of all the key in a hashtable by using the "Keys" collection:
+
+	PS> $keyvaluestore.Keys
+
+![Using the Keys property of a hashtable](resources/screenshots/Screenshot-83-Types-Hashtables.png)
+
+----------
+
+## Hashtables (2) ##
+
+You can also iterate over all the values of a hashtable using the "Values" collection:
+
+	PS> $keyvaluestore.Values
+
+![Using the Values property of a hashtable](resources/screenshots/Screenshot-84-Types-Hashtables.png)
+
+And of course you can use the indexer notation to access a single value:
+
+	PS> $keyvaluestore["Key1"]
+
+![Using indexer notation to access a single value of a hashtable](resources/screenshots/Screenshot-85-Types-Hashtables.png)
+
+----------
+
+## Hashtables (3) ##
+
+And you can also set the values of hashtable:
+
+	PS> $keyvaluestore["Key1"] = "New Value"
+	PS> $keyvaluestore["Key4"] = "Value4"
+	PS> $keyvaluestore.Key5 = "Value 5"
+
+![Modifing the contents of an existing hashtable](resources/screenshots/Screenshot-86-Types-Hashtables.png)
+
+----------
+
 ## Using .NET Types ##
+
+PowerShell allows you to use any .NET type that is available in your GAC.
+
+Example:
 
 	PS> (new-object System.Net.WebClient).DownloadString("http://www.google.com")
 
