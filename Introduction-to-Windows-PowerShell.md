@@ -1559,7 +1559,7 @@ This statement of the PowerShell foreach loop is syntactically identical to the 
 
 ----------
 
-## Functions (1) ##
+## Functions (1): Syntax ##
 
 Functions are one of the four command types supported by PowerShell.
 
@@ -1578,7 +1578,7 @@ Functions are called like cmdlets.
 
 ----------
 
-## Functions (2) ##
+## Functions (2): Example ##
 
 **Example**
 
@@ -1597,7 +1597,7 @@ Functions are called like cmdlets.
 
 ----------
 
-## Functions (3) ##
+## Functions (3): Function Provider ##
 
 **Function PowerShell Provider**
 
@@ -1607,6 +1607,154 @@ You can access all function in your current PowerShell session via the Function-
 	PS Function:\> dir
 
 ![Screenshot of a PowerShell console showing the contents of the Function: PowerShell Drive](resources/screenshots/Screenshot-75-Functions-PowerShell-Drive.png)
+
+----------
+
+## Functions (4): Named Parameters  ##
+
+There are two ways of specifying parameters for functions.
+
+Using the **Braces**:
+
+	function SayHallo-To ($name)
+	{
+		"Hallo $name"
+	}
+
+Using the **Param keyword**:
+
+	function SayHallo-To
+	{
+		param($name)
+		
+		"Hallo $name"
+	}
+
+Both ways are fine. You can use the syntax that you prefer. I prefer the latter.
+
+----------
+
+## Functions (5): Parameter Types ##
+
+By default you don't have to specify the types of parameters in PowerShell, but it can be useful sometimes.
+
+	function DaysTillBirthday([DateTime] $Birthdate)
+	{
+		$now = [DateTime]::Now
+		$thisYearsBirthday = [DateTime] "$($now.Year)-$($Birthdate.Month)-$($Birthdate.Day)"
+	
+		$timespan = $thisYearsBirthday - $now
+	
+		if ($timespan.Days -gt 0)
+		{
+			"$($timespan.Days) days to go"
+		}
+		else
+		{
+			"It's been $($timespan.Days) days ago"
+		}
+	}
+	
+	DaysTillBirthday -Birthdate "1983-05-13"
+
+----------
+
+## Functions (6): Parameter Default Values ##
+
+PowerShell allows you to specify default values for parameters.
+
+	function dayOfWeek ([DateTime] $date = $(get-date))
+	{
+		$date.dayofweek
+	}
+
+	PS> dayOfWeek -date "2012-05-07"
+	Monday
+
+If you don't specify the date parameter the function will use the result of the "get-date" cmdlet:
+
+	PS> dayOfWeek
+	Tuesday
+
+![Screenshot of PowerShell function making use of default values for function parameters](resources/screenshots/Screenshot-80-Functions-Parameter-Default-Values.png)
+
+----------
+
+## Functions (6): Switch Parameters ##
+
+A **switch** is a parameter that does not require a value and is either **$true** or **$false**.
+
+	function game ([switch] $on)
+	{
+		if ($on) {
+			"Game on!"
+		}
+		else {
+			"Car"
+		}
+	}
+
+	PS> game -on
+
+![Screenshot of simple function showing the use of a Powershell switch parameter](resources/screenshots/Screenshot-79-Functions-Switch-Parameters.png)
+
+[Game On](http://www.youtube.com/watch?v=hz1kmGKDuUE "Wayne's World - GAME ON!!! - YouTube")
+
+----------
+
+## Functions (7): Positional Parameters ##
+
+Positional Paramters are parameters withour a parameter name. You can access them using the **$args** array.
+
+	function implode
+	{
+		[string]::join(",", $args)
+	}
+
+	PS> implode 1 2 3 4 5
+
+![Screenshot of a function making use of positional arguments](resources/screenshots/Screenshot-77-Functions-Positional-Parameters.png)
+
+----------
+
+## Functions (8): Return Values ##
+
+Unlike other programming languages, PowerShell does not require a return statement in its functions.
+A PowerShell function will automatically return the results of every statement that isn't captured.
+
+- A return statement is not required
+- You can use the return statement to exit a function early
+- Every statement that has an output will be part of the functions return value, unless the output is captured or redirected
+
+Example: A function which returns a text
+
+	function Sample
+	{
+		"This is the result of the Sample function"
+	}
+
+----------
+
+## Functions (9): Return Values ##
+
+Example: A function which uses the **return statement** to exit early
+
+	function Sample ([switch] $noReturnValuePlease)
+	{
+		if ($noReturnValuePlease) {
+			return
+		}
+
+		"This is the result of the Sample function"
+	}
+
+![Screenshot of a function that makes use of the return statement to exit the function early](resources/screenshots/Screenshot-81-Functions-Return-Values.png)
+
+----------
+
+## Functions (10): Resources ##
+
+- [get-help about_Functions](http://technet.microsoft.com/en-US/library/dd347712.aspx)
 
 ----------
 
