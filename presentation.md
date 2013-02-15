@@ -31,7 +31,7 @@ Please take everything you'll see in this document with a grain of salt ;-)
 
 **Screenshot of the Windows PowerShell Console 2.0**
 
-![Screenshot of the Windows PowerShell Console 2.0](resources/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png)
+![Screenshot of the Windows PowerShell Console 2.0](files/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png)
 
 ----------
 
@@ -78,7 +78,7 @@ Please take everything you'll see in this document with a grain of salt ;-)
 - Command.com
 - Cmd.exe
 
-![Screenshot of the Windows Command-Line cmd.exe](resources/screenshots/Screenshot-09-Windows-CMD-Exe-Shell.png)
+![Screenshot of the Windows Command-Line cmd.exe](files/screenshots/Screenshot-09-Windows-CMD-Exe-Shell.png)
 
 - PowerShell
 
@@ -87,18 +87,18 @@ Please take everything you'll see in this document with a grain of salt ;-)
 ## Examples: Windows Shells (2) ##
 - Cygwin
 
-![Screenshot of the Cygwin GNU Bash](resources/screenshots/Screenshot-08-Cygwin-GNU-Bash.png)
+![Screenshot of the Cygwin GNU Bash](files/screenshots/Screenshot-08-Cygwin-GNU-Bash.png)
 
 ----------
 
 ## Examples: Browser Shells ##
 - Chrome Console
 
-![Screenshot of the Google Chrome Developer Tools Console](resources/screenshots/Screenshot-06-Chrome-Console.png)
+![Screenshot of the Google Chrome Developer Tools Console](files/screenshots/Screenshot-06-Chrome-Console.png)
 
 - Firebug Command Line
 
-![Screenshot of the Firebug Command-Line for Firefox](resources/screenshots/Screenshot-07-Firebug-Command-Line.png)
+![Screenshot of the Firebug Command-Line for Firefox](files/screenshots/Screenshot-07-Firebug-Command-Line.png)
 
 ----------
 
@@ -176,13 +176,13 @@ If you are running a recent version of Windows you will have PowerShell already 
 
 > Start > Accessories > Windows PowerShell
 
-![Screenshot of the PowerShell tool in the Windows Start menu under Start>Accessories>Windows PowerShell](resources/screenshots/Screenshot-03-PowerShell-Shortcuts-Window-Start-Menu.png)
+![Screenshot of the PowerShell tool in the Windows Start menu under Start>Accessories>Windows PowerShell](files/screenshots/Screenshot-03-PowerShell-Shortcuts-Window-Start-Menu.png)
 
 ----------
 
 ## PowerShell Command-Line (2) ##
 
-![Screenshot of the Windows PowerShell Console 2.0](resources/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png)
+![Screenshot of the Windows PowerShell Console 2.0](files/screenshots/Screenshot-01-Windows-PowerShell-Version-2.0.png)
 
 ----------
 
@@ -192,13 +192,13 @@ If don’t have the PowerShell debugger installed you can add it via the Windows
 
 > Server Management > Features > Add Feature > "Windows Integrated Scripting Environment (ISE)"
 
-![Screenshot of the Server Managment Feature Dialog for installing the Windows PowerShell Integrated Scripting Environment / Debugger on Windows Server 2008 R2 64bit](resources/screenshots/Screenshot-05-Installing-Windows-PowerShell-Integrated-Scripting-Environment-ISE-on-Windows-Server-2008-R2.png)
+![Screenshot of the Server Managment Feature Dialog for installing the Windows PowerShell Integrated Scripting Environment / Debugger on Windows Server 2008 R2 64bit](files/screenshots/Screenshot-05-Installing-Windows-PowerShell-Integrated-Scripting-Environment-ISE-on-Windows-Server-2008-R2.png)
 
 ----------
 
 ## PowerShell ISE / Debugger (2) ##
 
-![Screenshot of the Windows PowerShell Integrated Scripting Environment (ISE) - The PowerShell Debugger.](resources/screenshots/Screenshot-02-Windows-PowerShell-ISE-Debugger.png)
+![Screenshot of the Windows PowerShell Integrated Scripting Environment (ISE) - The PowerShell Debugger.](files/screenshots/Screenshot-02-Windows-PowerShell-ISE-Debugger.png)
 
 ----------
 
@@ -208,7 +208,7 @@ The PowerShell executables are located in the folder:
 
 > %windir%\System32\WindowsPowerShell\v1.0
 
-![Screenshot of the Windows PowerShell installation directory under %windir%\System32\WindowsPowerShell\v1.0](resources/screenshots/Screenshot-04-PowerShell-Installation-Folder.png)
+![Screenshot of the Windows PowerShell installation directory under %windir%\System32\WindowsPowerShell\v1.0](files/screenshots/Screenshot-04-PowerShell-Installation-Folder.png)
 
 ----------
 
@@ -220,7 +220,7 @@ By default, PowerShell will not allow you to run scripts. Not external ones and 
 
 In order to overcome this restriction we must change PowerShells security policy ("execution policy").
 
-![Screenshot of a PowerShell window displaying a security warning](resources/screenshots/Screenshot-12-Execution-Policy.png)
+![Screenshot of a PowerShell window displaying a security warning](files/screenshots/Screenshot-12-Execution-Policy.png)
 
 ----------
 
@@ -232,7 +232,7 @@ In order to be able to run (unsigned) PowerShell scripts and configuration files
 	
 	PS> Set-ExecutionPolicy RemoteSigned
 
-![Screenshot of a Windows PowerShell window where the execution policy has been changed from Restricted to RemoteSigned](resources/screenshots/Screenshot-13-Execution-Policy.png)
+![Screenshot of a Windows PowerShell window where the execution policy has been changed from Restricted to RemoteSigned](files/screenshots/Screenshot-13-Execution-Policy.png)
 
 **Links**
 
@@ -261,7 +261,7 @@ Then enter the following text and then save the changes:
 	[Extensions]
 	purge =
 
-![Screenshot of the Mercurial profile with a set set username](resources/screenshots/Screenshot-11-Configure-Mercurial.png)
+![Screenshot of the Mercurial profile with a set set username](files/screenshots/Screenshot-11-Configure-Mercurial.png)
 
 ----------
 
@@ -314,11 +314,11 @@ The PowerShell console is based on cmd.exe and has basically the same features, 
 
 **Evaluation of basic expressions**
 
-![Screenshot of expression evaluation feature of the PowerShell console](resources/screenshots/Screenshot-14-Expression-Evaluation-in-PowerShell.png)
+![Screenshot of expression evaluation feature of the PowerShell console](files/screenshots/Screenshot-14-Expression-Evaluation-in-PowerShell.png)
 
 **F7 Command History**: As in cmd.exe the <F7> key pops up a command history window
 
-![Screenshot of the PowerShell command history feature which is displayed when the user hits th F7 key](resources/screenshots/Screenshot-17-Command-History.png)
+![Screenshot of the PowerShell command history feature which is displayed when the user hits th F7 key](files/screenshots/Screenshot-17-Command-History.png)
 
 ----------
 
@@ -335,7 +335,7 @@ A PowerShell command consists of:
 - Command Parameter(s)
 - Command Argument(s)
 
-![PowerShell Command Structure: Command Name, Switch Parameter(s), Command Parameter(s) and Command Argument(s)](resources/screenshots/Screenshot-18-Command-Syntax.png)
+![PowerShell Command Structure: Command Name, Switch Parameter(s), Command Parameter(s) and Command Argument(s)](files/screenshots/Screenshot-18-Command-Syntax.png)
 
 ----------
 
@@ -433,7 +433,7 @@ All variables can be accessed through a PowerShell provider/drive called "variab
 	PS> dir
 	PS> get-item someVariable
 
-![Screenshot of a PowerShell Console window which defined a new variable and accesses it through the variable: PowerShell drive provider](resources/screenshots/Screenshot-35-Variables.png)
+![Screenshot of a PowerShell Console window which defined a new variable and accesses it through the variable: PowerShell drive provider](files/screenshots/Screenshot-35-Variables.png)
 
 ----------
 
@@ -447,7 +447,7 @@ Missing quotes might lead to errors if the command argument contains whitespace 
 
 	PS> Set-Location .\Program Files (x86)
 
-![Screenshot of a PowerShell console where the correct quoting is missing for a set-location command](resources/screenshots/Screenshot-24-Quoting.png)
+![Screenshot of a PowerShell console where the correct quoting is missing for a set-location command](files/screenshots/Screenshot-24-Quoting.png)
 
 ----------
 
@@ -457,13 +457,13 @@ Missing quotes might lead to errors if the command argument contains whitespace 
 
 	PS> Set-Location '.\Program Files (x86)'
 
-![Screenshot of a PowerShell console using single quotes for the set-location command](resources/screenshots/Screenshot-25-Quoting.png)
+![Screenshot of a PowerShell console using single quotes for the set-location command](files/screenshots/Screenshot-25-Quoting.png)
 
 **Double Quotes**
 
 	PS> Set-Location ".\Program Files (x86)"
 
-![Screenshot of a PowerShell console using double quotes for the set-location command](resources/screenshots/Screenshot-26-Quoting.png)
+![Screenshot of a PowerShell console using double quotes for the set-location command](files/screenshots/Screenshot-26-Quoting.png)
 
 ----------
 
@@ -492,7 +492,7 @@ Since PowerShell is a Shell that needs to support Windows-style file systems, it
 
 	PS> Write-Host "Line1`nLine2"
 
-![Screenshot of the PowerShell console using the new-line escape sequence for the Write-Host command](resources/screenshots/Screenshot-27-Escape-Characters.png)
+![Screenshot of the PowerShell console using the new-line escape sequence for the Write-Host command](files/screenshots/Screenshot-27-Escape-Characters.png)
 
 ----------
 
@@ -502,14 +502,14 @@ Since PowerShell is a Shell that needs to support Windows-style file systems, it
 
 	PS> Write-Host "Key:`tvalue"
 
-![Screenshot of the PowerShell console using the tab escape sequence for the Write-Host command](resources/screenshots/Screenshot-28-Escape-Characters.png)
+![Screenshot of the PowerShell console using the tab escape sequence for the Write-Host command](files/screenshots/Screenshot-28-Escape-Characters.png)
 
 **Example: Double Quotes**
 
 	PS> $value = "Lorem Ipsum"
 	PS> Write-Host "Key:`"$value`""
 
-![Screenshot of the PowerShell console using the double quote escape sequence for the Write-Host command](resources/screenshots/Screenshot-29-Escape-Characters.png)
+![Screenshot of the PowerShell console using the double quote escape sequence for the Write-Host command](files/screenshots/Screenshot-29-Escape-Characters.png)
 
 ----------
 
@@ -528,7 +528,7 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS> 9,0)
 	PS> 
 
-![Screenshot showing array which spreads several lines in the PowerShell console](resources/screenshots/Screenshot-19-Statement-Termination.png)
+![Screenshot showing array which spreads several lines in the PowerShell console](files/screenshots/Screenshot-19-Statement-Termination.png)
 
 ----------
 
@@ -541,7 +541,7 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS> }
 	PS> 
 
-![Screenshot showing a foreach loop which spreads several lines in the PowerShell console](resources/screenshots/Screenshot-20-Statement-Termination.png)
+![Screenshot showing a foreach loop which spreads several lines in the PowerShell console](files/screenshots/Screenshot-20-Statement-Termination.png)
 
 ----------
 
@@ -555,7 +555,7 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS> $a + $b
 	PS> 
 
-![Screenshot showing the use of expressions and semicolons for multi-line statements in the PowerShell console](resources/screenshots/Screenshot-21-Statement-Termination.png)
+![Screenshot showing the use of expressions and semicolons for multi-line statements in the PowerShell console](files/screenshots/Screenshot-21-Statement-Termination.png)
 
 ----------
 
@@ -569,7 +569,7 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS> Line 3"
 	PS>
 
-![Screenshot showing the use of double quotes for multi-line statements in the PowerShell console](resources/screenshots/Screenshot-22-Statement-Termination.png)
+![Screenshot showing the use of double quotes for multi-line statements in the PowerShell console](files/screenshots/Screenshot-22-Statement-Termination.png)
 
 ----------
 
@@ -582,7 +582,7 @@ PowerShell has two statement termination characters: the **semicolon** (;) and s
 	PS> -Filter *.ini
 	PS>
 
-![Screenshot showing the use of the backtick (`) character for bypassing the statement termination in the PowerShell console](resources/screenshots/Screenshot-23-Statement-Termination.png)
+![Screenshot showing the use of the backtick (`) character for bypassing the statement termination in the PowerShell console](files/screenshots/Screenshot-23-Statement-Termination.png)
 
 ----------
 
@@ -618,7 +618,7 @@ PowerShell has a built-in help command that can provide a lot of information and
 
 	PS> get-help
 
-![Screenshot of the PowerShell console displaying the result of the get-help command](resources/screenshots/Screenshot-30-Help.png)
+![Screenshot of the PowerShell console displaying the result of the get-help command](files/screenshots/Screenshot-30-Help.png)
 
 ----------
 
@@ -628,7 +628,7 @@ Using the get-help command together with the "-examples" switch to display some 
 
 	PS> get-help set-location -examples
 
-![Screenshot of the PowerShell console displaying the results of the get-help set-location -examples command](resources/screenshots/Screenshot-32-Help.png)
+![Screenshot of the PowerShell console displaying the results of the get-help set-location -examples command](files/screenshots/Screenshot-32-Help.png)
 
 ----------
 
@@ -638,7 +638,7 @@ The PowerShell Get-Help cmdlets returns objects not just plain text, but full he
 
 	PS> (get-help set-location) | Get-Member
 
-![Screenshot of the PowerShell console displaying the properties of a help object](resources/screenshots/Screenshot-34-Help.png)
+![Screenshot of the PowerShell console displaying the properties of a help object](files/screenshots/Screenshot-34-Help.png)
 
 ----------
 
@@ -648,7 +648,7 @@ Using the "syntax" property of an help object to display only the syntax section
 
 	PS> (get-help set-location).Syntax
 
-![Screenshot of the PowerShell console displaying the results of the (get-help set-location).Syntax command](resources/screenshots/Screenshot-33-Help.png)
+![Screenshot of the PowerShell console displaying the results of the (get-help set-location).Syntax command](files/screenshots/Screenshot-33-Help.png)
 
 ----------
 
@@ -689,7 +689,7 @@ In order to to get full list of all available comands you can use the "get-comma
 
 	PS> get-command
 
-![Screenshot of the PowerShell console displaying the result of the get-command cmdlet](resources/screenshots/Screenshot-36-Get-Command.png)
+![Screenshot of the PowerShell console displaying the result of the get-command cmdlet](files/screenshots/Screenshot-36-Get-Command.png)
 
 ----------
 
@@ -701,7 +701,7 @@ You can also use wildcards to search for commands for specific commands.
 
 	PS> get-command write-*
 
-![Screenshot of the PowerShell console displaying the result of the get-command write-* command](resources/screenshots/Screenshot-37-Get-Command-With-Wildcards.png)
+![Screenshot of the PowerShell console displaying the result of the get-command write-* command](files/screenshots/Screenshot-37-Get-Command-With-Wildcards.png)
 
 ----------
 
@@ -711,7 +711,7 @@ You can also use wildcards to search for commands for specific commands.
 
 	PS> get-command *item*
 
-![Screenshot of the PowerShell console displaying the result of the get-command write-* command](resources/screenshots/Screenshot-39-Get-Command-With-Wildcards.png)
+![Screenshot of the PowerShell console displaying the result of the get-command write-* command](files/screenshots/Screenshot-39-Get-Command-With-Wildcards.png)
 
 ----------
 
@@ -783,7 +783,7 @@ To get a full list of all aliases use the **get-alias** command:
 
 	PS> get-alias
 
-![Screenshot of the PowerShell console displaying the result of the get-alias command](resources/screenshots/Screenshot-42-Command-Aliases.png)
+![Screenshot of the PowerShell console displaying the result of the get-alias command](files/screenshots/Screenshot-42-Command-Aliases.png)
 
 ----------
 
@@ -793,7 +793,7 @@ For getting all aliases for a specific command use the *definition*-parameter fo
 
 	PS> get-alias -definition Remove-Item
 
-![Screenshot of the PowerShell console displaying the result of the get-alias -definition command for the remove-item command](resources/screenshots/Screenshot-43-Command-Aliases.png)
+![Screenshot of the PowerShell console displaying the result of the get-alias -definition command for the remove-item command](files/screenshots/Screenshot-43-Command-Aliases.png)
 
 If you need more background information about PowerShell aliases, please refer to the PowerShell online help:
 
@@ -833,7 +833,7 @@ These drives are called **PowerShell Drives** or short **PSDrives**.
 - Reuse of the same cmdlets that are used for file system drives (set-location, get-childitem, new-item, remove-item, move-item, ...)
 - Universal support for wildcards
 
-![Screenshot of a Windows PowerShell console displaying the use of the IIS PowerShell Provider/Drive](resources/screenshots/Screenshot-44-PowerShell-Providers.png)
+![Screenshot of a Windows PowerShell console displaying the use of the IIS PowerShell Provider/Drive](files/screenshots/Screenshot-44-PowerShell-Providers.png)
 
 ----------
 
@@ -861,7 +861,7 @@ Windows PowerShell comes with a number of built-in providers / PowerShell drives
 	PS C:\Users\Administrator> cd variable:
 	PS Variable:\> dir
 
-![Screenshot of a Windows PowerShell console displaying the use of the variable: PowerShell drive](resources/screenshots/Screenshot-45-PowerShell-Providers.png)
+![Screenshot of a Windows PowerShell console displaying the use of the variable: PowerShell drive](files/screenshots/Screenshot-45-PowerShell-Providers.png)
 
 ----------
 
@@ -871,7 +871,7 @@ You can retrieve a list of all available PowerShell **providers** with the *Get-
 
 	PS> get-psprovider
 
-![Screenshot of a Windows PowerShell console displaying the result of the get-psprovider command](resources/screenshots/Screenshot-47-PowerShell-Providers.png)
+![Screenshot of a Windows PowerShell console displaying the result of the get-psprovider command](files/screenshots/Screenshot-47-PowerShell-Providers.png)
 
 ----------
 
@@ -881,7 +881,7 @@ You can retrieve a list of all available PowerShell **drives** with the *Get-PSD
 
 	PS> get-psdrive
 
-![Screenshot of a Windows PowerShell console displaying the result of the get-psdrive command](resources/screenshots/Screenshot-46-PowerShell-Providers.png)
+![Screenshot of a Windows PowerShell console displaying the result of the get-psdrive command](files/screenshots/Screenshot-46-PowerShell-Providers.png)
 
 ----------
 
@@ -920,7 +920,7 @@ Send the **objects** that are returned by one command to be used as input to ano
 Each command in the pipeline receives an object from the previous command, performs some operation on
 it, and then passes it along to the next command in the pipeline.
 
-![Anatomy of a PowerShell pipeline (source: Payette, Bruce; PowerShell in Action)](resources/screenshots/Screenshot-48-Anatomy-of-a-PowerShell-Pipeline.png)
+![Anatomy of a PowerShell pipeline (source: Payette, Bruce; PowerShell in Action)](files/screenshots/Screenshot-48-Anatomy-of-a-PowerShell-Pipeline.png)
 
 ----------
 
@@ -932,7 +932,7 @@ Sending the results of the dir/get-childitem command directly to the format-tabl
 
 	PS> dir -Recurse -Filter *.ps1 | Format-Table Name,Directory
 
-![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: dir -Recurse -Filter *.ps1 | Format-Table Name,Directory](resources/screenshots/Screenshot-49-PowerShell-Pipelines.png)
+![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: dir -Recurse -Filter *.ps1 | Format-Table Name,Directory](files/screenshots/Screenshot-49-PowerShell-Pipelines.png)
 
 ----------
 
@@ -944,7 +944,7 @@ Using the Where-Object cmdlet to display only the process with the desired name 
 
 	PS> Get-Process | Where-Object { $_.ProcessName -eq "chrome" }
 
-![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: Get-Process | Where-Object { $_.ProcessName -eq chrome }](resources/screenshots/Screenshot-50-PowerShell-Pipelines.png)
+![Screenshot of a PowerShell console showing the result of a PowerShell command pipeline: Get-Process | Where-Object { $_.ProcessName -eq chrome }](files/screenshots/Screenshot-50-PowerShell-Pipelines.png)
 
 ----------
 
@@ -974,7 +974,7 @@ By default, Windows PowerShell sends all output to the console, but like all she
 
 Content of *myScript.ps1*
 
-![Screenshot showing the content of the someScript.ps1 PowerShell script](resources/screenshots/Screenshot-57-Output-Redirection.png)
+![Screenshot showing the content of the someScript.ps1 PowerShell script](files/screenshots/Screenshot-57-Output-Redirection.png)
 
 	$fileName = "test.txt"
 	
@@ -994,7 +994,7 @@ Content of *myScript.ps1*
 
 	PS> .\myScript.ps1
 
-![Screenshot showing the result of the someScript.ps1 PowerShell script](resources/screenshots/Screenshot-51-Output-Redirection.png)
+![Screenshot showing the result of the someScript.ps1 PowerShell script](files/screenshots/Screenshot-51-Output-Redirection.png)
 
 When you execute the script "someScript.ps1" you will get a result which looks something like you can see in the screenshot above:
 
@@ -1010,7 +1010,7 @@ Now you can redirect the output of the script to a file with the ">" operator:
 
 	PS> .\someScript.ps1 > ..\output-of-someScript.txt
 
-![Screenshot showing the output of the someScript.ps1 PowerShell script which is redirected to a text file whereas the errors are printed to the console window](resources/screenshots/Screenshot-53-Output-Redirection.png)
+![Screenshot showing the output of the someScript.ps1 PowerShell script which is redirected to a text file whereas the errors are printed to the console window](files/screenshots/Screenshot-53-Output-Redirection.png)
 
 - Only the output is redirected to the the text file
 - The error message is printed to the console window
@@ -1027,7 +1027,7 @@ In order to redirect only the error messages to a file you can use the "2>" oper
 
 	PS> .\someScript.ps1 2> ..\output-of-someScript.txt
 
-![Screenshot showing the result of the someScript.ps1 PowerShell script in the console window whereas the error is redirected to a text file](resources/screenshots/Screenshot-54-Output-Redirection.png)
+![Screenshot showing the result of the someScript.ps1 PowerShell script in the console window whereas the error is redirected to a text file](files/screenshots/Screenshot-54-Output-Redirection.png)
 
 - Only the error is redirected to the the text file
 - The message output is printed to the console window
@@ -1040,7 +1040,7 @@ With the "2>&1" operator you can force PowerShell to redirect error messages to 
 
 	PS> .\someScript.ps1 > ..\output.txt
 
-![Screenshot showing the result of the ](resources/screenshots/Screenshot-58-Output-Redirection.png)
+![Screenshot showing the result of the ](files/screenshots/Screenshot-58-Output-Redirection.png)
 
 ----------
 
@@ -1050,7 +1050,7 @@ Output that would normally be redirected to the console window (error stream) is
 
 	PS> .\someScript.ps1 > ..\output.txt 2>&1
 
-![Screenshot showing the result of the ](resources/screenshots/Screenshot-59-Output-Redirection.png)
+![Screenshot showing the result of the ](files/screenshots/Screenshot-59-Output-Redirection.png)
 
 ----------
 
@@ -1128,7 +1128,7 @@ A variable is a unit of memory in which values are stored.
 - If you want a certain variable in every PowerShell session you have to add the variable to your PowerShell profile ($profile)
 - You can also created variables with global, script, or local scope
 
-![Screenshot showing user-created variables from the PowerShell profile in a PowerShell session via the get-variable cmdlet](resources/screenshots/Screenshot-65-Variables-User-Created-Profile-Variables.png)
+![Screenshot showing user-created variables from the PowerShell profile in a PowerShell session via the get-variable cmdlet](files/screenshots/Screenshot-65-Variables-User-Created-Profile-Variables.png)
 
 ----------
 ## Automatic Variables ##
@@ -1279,7 +1279,7 @@ Use the *get-variable* cmdlet to get a list of all variables in your current Pow
 
 	PS> get-variable
 
-![Screenshot showing the results of the get-variable command](resources/screenshots/Screenshot-62-Variables-Get-Variable.png)
+![Screenshot showing the results of the get-variable command](files/screenshots/Screenshot-62-Variables-Get-Variable.png)
 
 ----------
 
@@ -1289,11 +1289,11 @@ Use wildcards for the *get-variable* cmdlet to search for variables:
 
 	PS> get-variable p*
 
-![Screenshot showing the results of the get-variable p* command with wildcards](resources/screenshots/Screenshot-63-Variables-Get-Variable.png)
+![Screenshot showing the results of the get-variable p* command with wildcards](files/screenshots/Screenshot-63-Variables-Get-Variable.png)
 
 	PS> get-variable -Name p* -Exclude ps*
 
-![Screenshot showing the results of the get-variable -Name p* -Exclude Ps* command with wildcards](resources/screenshots/Screenshot-64-Variables-Get-Variable.png)
+![Screenshot showing the results of the get-variable -Name p* -Exclude Ps* command with wildcards](files/screenshots/Screenshot-64-Variables-Get-Variable.png)
 
 ----------
 
@@ -1304,7 +1304,7 @@ Use can use the **Variable PowerShell Provider** to access variables.
 	PS C:\Users\Administrator> set-location variable:
 	PS Variable:\> dir
 
-![Screenshot of a PowerShell console displaying the contents of the Variable: PowerShell drive](resources/screenshots/Screenshot-67-Variable-PowerShell-Drive.png)
+![Screenshot of a PowerShell console displaying the contents of the Variable: PowerShell drive](files/screenshots/Screenshot-67-Variable-PowerShell-Drive.png)
 
 ----------
 
@@ -1315,7 +1315,7 @@ You can use the **Environment PowerShell Provider** to access the variables from
 	PS C:\Users\Administrator> set-location Env:
 	PS Env:\> dir
 
-![Screenhot of a PowerShell console displaying the content of the Env: PowerShell drive](resources/screenshots/Screenshot-68-Environment-Variables.png)
+![Screenhot of a PowerShell console displaying the content of the Env: PowerShell drive](files/screenshots/Screenshot-68-Environment-Variables.png)
 
 ----------
 
@@ -1326,7 +1326,7 @@ Or you can access environment variables with their **scope modifier** "$env:<var
 	PS C:\Users\Administrator> set-location $env:SystemRoot
 	PS C:\Windows\>
 
-![Sample usage of the $env:SystemRoot environment variable](resources/screenshots/Screenshot-69-Environment-Variables.png)
+![Sample usage of the $env:SystemRoot environment variable](files/screenshots/Screenshot-69-Environment-Variables.png)
 
 ----------
 
@@ -1351,7 +1351,7 @@ Or you can access environment variables with their **scope modifier** "$env:<var
 - Dividation (10 / 5)
 - Modulus (7 % 4)
 
-![Screenshot showing the use of arithmetic operators in the PowerShell console](resources/screenshots/Screenshot-70-Arithmetic-Operators.png)
+![Screenshot showing the use of arithmetic operators in the PowerShell console](files/screenshots/Screenshot-70-Arithmetic-Operators.png)
 
 ----------
 
@@ -1479,7 +1479,7 @@ Again, the while loop has the same syntax as in most C-based languages:
 		write-host "The number is $index"
 	}
 
-![Screenshot of a simple while loop in the PowerShell console](resources/screenshots/Screenshot-71-Flow-Control-While-Loop.png)
+![Screenshot of a simple while loop in the PowerShell console](files/screenshots/Screenshot-71-Flow-Control-While-Loop.png)
 
 ----------
 
@@ -1503,7 +1503,7 @@ The do-while loop follows the same structure like the while loop:
 	}
 	while ($val -ne 3)
 
-![Screenshot of a simple do-while loop in the PowerShell console](resources/screenshots/Screenshot-72-Flow-Control-Do-While-Loop.png)
+![Screenshot of a simple do-while loop in the PowerShell console](files/screenshots/Screenshot-72-Flow-Control-Do-While-Loop.png)
 
 ----------
 
@@ -1528,7 +1528,7 @@ It’s not used as often in PowerShell as in other languages because there are f
 		Write-Host "$numbers[$index]"
 	}
 
-![Screenshot of a simple for loop in the PowerShell console](resources/screenshots/Screenshot-73-Flow-Control-For-Loop.png)
+![Screenshot of a simple for loop in the PowerShell console](files/screenshots/Screenshot-73-Flow-Control-For-Loop.png)
 
 ----------
 
@@ -1551,7 +1551,7 @@ This statement of the PowerShell foreach loop is syntactically identical to the 
 		Write-Host $entry
 	}
 
-![Screenshot of a simple foreach loop in the PowerShell console](resources/screenshots/Screenshot-74-Flow-Control-Foreach-Loop.png)
+![Screenshot of a simple foreach loop in the PowerShell console](files/screenshots/Screenshot-74-Flow-Control-Foreach-Loop.png)
 
 ----------
 
@@ -1593,7 +1593,7 @@ Functions are called like cmdlets.
 	PS> Hello
 	Hello World
 
-![Screenshot of the Hello Sample function](resources/screenshots/Screenshot-76-Functions-Example-Hello-World.png)
+![Screenshot of the Hello Sample function](files/screenshots/Screenshot-76-Functions-Example-Hello-World.png)
 
 ----------
 
@@ -1606,7 +1606,7 @@ You can access all function in your current PowerShell session via the Function-
 	PS C:\Users\Administrator> set-location function:
 	PS Function:\> dir
 
-![Screenshot of a PowerShell console showing the contents of the Function: PowerShell Drive](resources/screenshots/Screenshot-75-Functions-PowerShell-Drive.png)
+![Screenshot of a PowerShell console showing the contents of the Function: PowerShell Drive](files/screenshots/Screenshot-75-Functions-PowerShell-Drive.png)
 
 ----------
 
@@ -1676,7 +1676,7 @@ If you don't specify the date parameter the function will use the result of the 
 	PS> dayOfWeek
 	Tuesday
 
-![Screenshot of PowerShell function making use of default values for function parameters](resources/screenshots/Screenshot-80-Functions-Parameter-Default-Values.png)
+![Screenshot of PowerShell function making use of default values for function parameters](files/screenshots/Screenshot-80-Functions-Parameter-Default-Values.png)
 
 ----------
 
@@ -1696,7 +1696,7 @@ A **switch** is a parameter that does not require a value and is either **$true*
 
 	PS> game -on
 
-![Screenshot of simple function showing the use of a Powershell switch parameter](resources/screenshots/Screenshot-79-Functions-Switch-Parameters.png)
+![Screenshot of simple function showing the use of a Powershell switch parameter](files/screenshots/Screenshot-79-Functions-Switch-Parameters.png)
 
 [Game On](http://www.youtube.com/watch?v=hz1kmGKDuUE "Wayne's World - GAME ON!!! - YouTube")
 
@@ -1713,7 +1713,7 @@ Positional Paramters are parameters withour a parameter name. You can access the
 
 	PS> implode 1 2 3 4 5
 
-![Screenshot of a function making use of positional arguments](resources/screenshots/Screenshot-77-Functions-Positional-Parameters.png)
+![Screenshot of a function making use of positional arguments](files/screenshots/Screenshot-77-Functions-Positional-Parameters.png)
 
 ----------
 
@@ -1748,7 +1748,7 @@ Example: A function which uses the **return statement** to exit early
 		"This is the result of the Sample function"
 	}
 
-![Screenshot of a function that makes use of the return statement to exit the function early](resources/screenshots/Screenshot-81-Functions-Return-Values.png)
+![Screenshot of a function that makes use of the return statement to exit the function early](files/screenshots/Screenshot-81-Functions-Return-Values.png)
 
 ----------
 
@@ -1807,13 +1807,13 @@ You can create them using hash literals:
 	PS> $keyvaluestore = @{ Key1 = "Value1"; Key2 = "Value "; Key3 = "Value 3" }
 	$keyvaluestore
 
-![Screenshot of a simple PowerShell Hashtable](resources/screenshots/Screenshot-82-Types-Hashtables.png)
+![Screenshot of a simple PowerShell Hashtable](files/screenshots/Screenshot-82-Types-Hashtables.png)
 
 You can get a list of all the key in a hashtable by using the "Keys" collection:
 
 	PS> $keyvaluestore.Keys
 
-![Using the Keys property of a hashtable](resources/screenshots/Screenshot-83-Types-Hashtables.png)
+![Using the Keys property of a hashtable](files/screenshots/Screenshot-83-Types-Hashtables.png)
 
 ----------
 
@@ -1823,13 +1823,13 @@ You can also iterate over all the values of a hashtable using the "Values" colle
 
 	PS> $keyvaluestore.Values
 
-![Using the Values property of a hashtable](resources/screenshots/Screenshot-84-Types-Hashtables.png)
+![Using the Values property of a hashtable](files/screenshots/Screenshot-84-Types-Hashtables.png)
 
 And of course you can use the indexer notation to access a single value:
 
 	PS> $keyvaluestore["Key1"]
 
-![Using indexer notation to access a single value of a hashtable](resources/screenshots/Screenshot-85-Types-Hashtables.png)
+![Using indexer notation to access a single value of a hashtable](files/screenshots/Screenshot-85-Types-Hashtables.png)
 
 ----------
 
@@ -1841,7 +1841,7 @@ And you can also set the values of hashtable:
 	PS> $keyvaluestore["Key4"] = "Value4"
 	PS> $keyvaluestore.Key5 = "Value 5"
 
-![Modifing the contents of an existing hashtable](resources/screenshots/Screenshot-86-Types-Hashtables.png)
+![Modifing the contents of an existing hashtable](files/screenshots/Screenshot-86-Types-Hashtables.png)
 
 ----------
 
@@ -1886,7 +1886,7 @@ You can pass arguments to a PowerShell script in the same way you do it for func
 
 Live-Demo
 
-![Screenshot of a debugging session with PowerShell ISE](Lessons/Debugging-with-PowerShell-ISE/Screenshots/Screenshot-03.png)
+![Screenshot of a debugging session with PowerShell ISE](files/lessons/Debugging-with-PowerShell-ISE/screenshots/Screenshot-03.png)
 
 ----------
 
@@ -1973,7 +1973,7 @@ PowerShell supports XML documents as a primitive data type.
 		Write-Host "$($setting.psbase.InnerText) (Id: $($setting.Id))"
 	}
 
-![Screenshot of the PowerShell console executing the reading-xml.ps1 script](Lessons/Reading-and-Writing-XML/Screenshots/Screenshot-01-Reading-XML.png)
+![Screenshot of the PowerShell console executing the reading-xml.ps1 script](files/lessons/Reading-and-Writing-XML/screenshots/Screenshot-01-Reading-XML.png)
 
 ----------
 
@@ -2006,7 +2006,7 @@ PowerShell supports XML documents as a primitive data type.
 
 ## Reading/Writing XML with PowerShell (3) ##
 
-![Screenshot of the PowerShell console executing the writing-xml.ps1 script](Lessons/Reading-and-Writing-XML/Screenshots/Screenshot-02-Writing-XML.png)
+![Screenshot of the PowerShell console executing the writing-xml.ps1 script](files/lessons/Reading-and-Writing-XML/screenshots/Screenshot-02-Writing-XML.png)
 
 ----------
 
@@ -2018,7 +2018,7 @@ PowerShell supports XML documents as a primitive data type.
 
 Since PowerShell is hosted in the same console windows as the good old *cmd.exe*, it will look exactly like good old *cmd.exe* if you start it using the *PowerShell.exe*.
 
-![Screenshot of an un-customized PowerShell console window](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-01-Windows-PowerShell-Console-Without-Customization.png)
+![Screenshot of an un-customized PowerShell console window](files/lessons/Customizing-the-PowerShell-Console/screenshots/Screenshot-01-Windows-PowerShell-Console-Without-Customization.png)
 
 ----------
 
@@ -2026,7 +2026,7 @@ Since PowerShell is hosted in the same console windows as the good old *cmd.exe*
 
 If you want the same look and feel you get, if you open the PowerShell from a shortcut or your Windows start menu ...
 
-![Screenshot of an PowerShell console window with the classic PowerShell look](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-02-Windows-PowerShell-Console-With-Classic-PowerShell-Look.png)
+![Screenshot of an PowerShell console window with the classic PowerShell look](files/lessons/Customizing-the-PowerShell-Console/screenshots/Screenshot-02-Windows-PowerShell-Console-With-Classic-PowerShell-Look.png)
 
 ... you can assign your desired console window style in your personal PowerShell profile.
 
@@ -2070,13 +2070,13 @@ Then add the following code to your PowerShell profile:
 
 ## Customizing the PowerShell Console (4) ##
 
-![Screenshot showing the how the PowerShell customization code can be added to the PowerShell profile](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-07-Set-Style-In-PowerShell-Profile.png)
+![Screenshot showing the how the PowerShell customization code can be added to the PowerShell profile](files/lessons/Customizing-the-PowerShell-Console/screenshots/Screenshot-07-Set-Style-In-PowerShell-Profile.png)
 
 ----------
 
 ## Customizing the PowerShell Console (5) ##
 
-![Screenshot showing a customized PowerShell console](Lessons/Customizing-the-PowerShell-Console/Screenshots/Screenshot-10-Set-Style-In-PowerShell-Profile.png)
+![Screenshot showing a customized PowerShell console](files/lessons/Customizing-the-PowerShell-Console/screenshots/Screenshot-10-Set-Style-In-PowerShell-Profile.png)
 
 ----------
 
@@ -2115,7 +2115,7 @@ Every time the content of an file on the users Desktop changed the script will w
 
 	"file-xy.txt just changed"
 
-![Screenshot of the PowerShell file-changed watcher in action](Lessons/Filesystem-Watcher/Screenshots/Screenshot-02.png)
+![Screenshot of the PowerShell file-changed watcher in action](files/lessons/Filesystem-Watcher/screenshots/Screenshot-02.png)
 
 ----------
 
@@ -2135,7 +2135,7 @@ The location of your PowerShell profile is stored in the $PROFILE variable:
 	PS> $profile
 	C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
-![Screenshot of Windows PowerShell Console displaying the content of the $profile variable](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-01-Profile-Variable.png)
+![Screenshot of Windows PowerShell Console displaying the content of the $profile variable](files/lessons/Profile-Extension-Clipboard/screenshots/Screenshot-01-Profile-Variable.png)
 
 ----------
 
@@ -2147,7 +2147,7 @@ You can edit your profile script by entering:
 
 In case you don’t have a profile script you will get a message like this:
 
-![$profile does not exist](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-02-Profile-Does-Not-Exist.png)
+![$profile does not exist](files/lessons/Profile-Extension-Clipboard/screenshots/Screenshot-02-Profile-Does-Not-Exist.png)
 
 ----------
 
@@ -2157,7 +2157,7 @@ In order to create the profile script and open it with notepad enter this comman
 
 	PS> notepad (New-Item $PROFILE -Type file -force)
 
-![Create a PowerShell Profile and edit it with notepad](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-03-Creating-a-Profile.png)
+![Create a PowerShell Profile and edit it with notepad](files/lessons/Profile-Extension-Clipboard/screenshots/Screenshot-03-Creating-a-Profile.png)
 
 Everything that you add to this script will be executed when you launch a new instance of PowerShell.
 
@@ -2169,7 +2169,7 @@ In order to open the directory of the profile script you can enter:
 
 	PS> explorer (Get-Item $PROFILE).Directory
 
-![PowerShell command for opening the PowerShell $profile directory in the Windows Explorer](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-04-Open-Profile-Directory-in-Windows-Explorer.png)
+![PowerShell command for opening the PowerShell $profile directory in the Windows Explorer](files/lessons/Profile-Extension-Clipboard/screenshots/Screenshot-04-Open-Profile-Directory-in-Windows-Explorer.png)
 
 ----------
 
@@ -2192,7 +2192,7 @@ Start a new instance of PowerShell and verify that your functions have been appl
 
 	PS> Get-Command *Clipboard*
 
-![Screenshot of a PowerShell console displaying the two new functions for reading and writing from and to the Windows Clipboard: Get-ClipboardText and Out-Clipboard](Lessons/Profile-Extension-Clipboard/Screenshots/Screenshot-05-Get-Clipboard-Commands.png)
+![Screenshot of a PowerShell console displaying the two new functions for reading and writing from and to the Windows Clipboard: Get-ClipboardText and Out-Clipboard](files/lessons/Profile-Extension-Clipboard/screenshots/Screenshot-05-Get-Clipboard-Commands.png)
 
 ----------
 
