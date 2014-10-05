@@ -1,13 +1,13 @@
-# Windows PowerShell #
+# Windows PowerShell Workshop #
 
-----------
+An introduction workshop to Windows PowerShell 2.0
 
-## Agenda ##
+**Agenda**
 
 - Introduction to PowerShell
 - Getting Started with PowerShell
 - Core Elements of PowerShell
-- Hands on PowerShell 
+- Hands on PowerShell
 
 ----------
 
@@ -2269,3 +2269,11 @@ tbd
 ## Creating a custom open-folder command ##
 
 tbd
+
+---
+
+type: presentation
+created at: 2012-04-30
+modified at: 2012-05-08
+language: en
+tags: PowerShell, Tutorial
